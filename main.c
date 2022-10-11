@@ -85,8 +85,8 @@ int main(int argc, char ** argv)
         // extern void CHOSEN_DEMO(void);
         // CHOSEN_DEMO();
 
-        lv_obj_t *main_screen = setup_screen_main();
-        lv_scr_load(main_screen);
+        lv_obj_t *screen1 = setup_screen_screen_1();
+        lv_scr_load(screen1);
 
     }
 
