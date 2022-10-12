@@ -29,10 +29,10 @@ More info here: https://kripken.github.io/emscripten-site/docs/getting_started/d
 
 ## Get the Emscripten-LVGL project
 1. Be sure you ran `. <path-to-emsdk>/emsdk_env.sh` to add EMSDK to `PATH`
-2. In any directoy: `git clone --recursive https://github.com/lvgl/lv_web_emscripten.git`
+2. In any directoy: `git clone --recurse-submodules https://github.com/mvladic/lv_web_emscripten.git`
 3. `cd <path-to-emscripten>`
-4. `mkdir cmbuild`
-5. `cd cmbuild`
+4. `mkdir build`
+5. `cd build`
 6. `emcmake cmake ..`
 7. `emmake make -j4`
 5. A file called `index.html` will be generated. Run this in your browser.
