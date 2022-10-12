@@ -20,7 +20,7 @@
 
 #include "examplelist.h"
 
-#include "generated.h"
+#include "ui/screens.h"
 
 /*********************
  *      DEFINES
@@ -85,9 +85,8 @@ int main(int argc, char ** argv)
         // extern void CHOSEN_DEMO(void);
         // CHOSEN_DEMO();
 
-        lv_obj_t *screen1 = setup_screen_screen_1();
-        lv_scr_load(screen1);
-
+        screen_1_print *screen_1_print = create_screen_1_print();
+        lv_disp_load_scr(screen_1_print->screen_obj);
     }
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
@@ -144,8 +143,8 @@ static void hal_init(void)
     disp_drv.ver_res = monitor_ver_res;
     disp1 = lv_disp_drv_register(&disp_drv);
 
-    lv_group_t * g = lv_group_create();
-    lv_group_set_default(g);
+    //lv_group_t * g = lv_group_create();
+    //lv_group_set_default(g);
 
     /* Add the mouse as input device
     * Use the 'mouse' driver which reads the PC's mouse*/
@@ -164,7 +163,7 @@ static void hal_init(void)
     indev_drv_2.type = LV_INDEV_TYPE_KEYPAD;
     indev_drv_2.read_cb = keyboard_read;
     lv_indev_t *kb_indev = lv_indev_drv_register(&indev_drv_2);
-    lv_indev_set_group(kb_indev, g);
+    //lv_indev_set_group(kb_indev, g);
     mousewheel_init();
     static lv_indev_drv_t indev_drv_3;
     lv_indev_drv_init(&indev_drv_3); /*Basic initialization*/
@@ -172,7 +171,7 @@ static void hal_init(void)
     indev_drv_3.read_cb = mousewheel_read;
 
     lv_indev_t * enc_indev = lv_indev_drv_register(&indev_drv_3);
-    lv_indev_set_group(enc_indev, g);
+    //lv_indev_set_group(enc_indev, g);
 
     /* Optional:
      * Create a memory monitor task which prints the memory usage in periodically.*/

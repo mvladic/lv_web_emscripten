@@ -20,14 +20,29 @@
       ],
       "files": [
         {
-          "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
-          "fileName": "generated.c",
-          "template": "#include \"lvgl/lvgl.h\"\n#include \"generated.h\"\n\n//${eez-studio LVGL_DEF}"
+          "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
+          "fileName": "ui/screens.h",
+          "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n#include \"lvgl/lvgl.h\"\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
         },
         {
-          "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
-          "fileName": "generated.h",
-          "template": "#ifndef EEZ_LVGL_GENERATED_H\r\n#define EEZ_LVGL_GENERATED_H\r\n\r\n//${eez-studio LVGL_DECL}\r\n\r\n#endif /*EEZ_LVGL_GENERATED_H*/"
+          "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
+          "fileName": "ui/screens.c",
+          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}"
+        },
+        {
+          "objID": "81fa9cb7-33e4-4272-9340-49a50037b327",
+          "fileName": "ui/images.h",
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n#include \"lvgl/lvgl.h\"\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+        },
+        {
+          "objID": "5844b3a8-54b7-4bdf-ff04-d052e689328c",
+          "fileName": "ui/images.c",
+          "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
+        },
+        {
+          "objID": "19d3d573-88a3-4550-f4da-753b61d7f0c4",
+          "fileName": "ui/actions.h",
+          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n#include \"lvgl/lvgl.h\"\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
         }
       ],
       "destinationFolder": "."
@@ -39,7 +54,16 @@
     "structures": [],
     "enums": []
   },
-  "actions": [],
+  "actions": [
+    {
+      "objID": "cdaa227e-6d90-40b8-85a9-07521c85d28b",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "name": "slider_print_view_value_changed",
+      "implementationType": "native"
+    }
+  ],
   "pages": [
     {
       "objID": "cdaef1bd-3ea5-454d-d35b-6abdc2451e57",
@@ -71,6 +95,7 @@
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
+          "eventHandlers": [],
           "image": "3d_printer_bg",
           "pivotX": 0,
           "pivotY": 0,
@@ -134,6 +159,7 @@
                   }
                 }
               },
+              "eventHandlers": [],
               "text": "The #ffffff squareline.gcode# word file is being printed",
               "longMode": "WRAP",
               "recolor": true
@@ -172,6 +198,7 @@
                   }
                 }
               },
+              "eventHandlers": [],
               "image": "icn_wifi",
               "pivotX": 0,
               "pivotY": 0,
@@ -212,6 +239,7 @@
                   }
                 }
               },
+              "eventHandlers": [],
               "image": "icn_pc",
               "pivotX": 0,
               "pivotY": 0,
@@ -252,6 +280,7 @@
                   }
                 }
               },
+              "eventHandlers": [],
               "image": "icn_usb",
               "pivotX": 0,
               "pivotY": 0,
@@ -277,7 +306,8 @@
                 }
               }
             }
-          }
+          },
+          "eventHandlers": []
         },
         {
           "objID": "bfd5652f-937c-4474-b809-2b7798c5cd9b",
@@ -313,6 +343,7 @@
               }
             }
           },
+          "eventHandlers": [],
           "image": "btn_print",
           "pivotX": 0,
           "pivotY": 0,
@@ -354,6 +385,7 @@
               }
             }
           },
+          "eventHandlers": [],
           "image": "btn_move",
           "pivotX": 0,
           "pivotY": 0,
@@ -395,6 +427,7 @@
               }
             }
           },
+          "eventHandlers": [],
           "image": "btn_setting",
           "pivotX": 0,
           "pivotY": 0,
@@ -486,6 +519,7 @@
                       }
                     }
                   },
+                  "eventHandlers": [],
                   "text": "70%",
                   "longMode": "WRAP",
                   "recolor": false
@@ -523,6 +557,13 @@
                   }
                 }
               },
+              "eventHandlers": [
+                {
+                  "objID": "f94c5e78-3ca0-4515-d676-a6fb68cca328",
+                  "trigger": "VALUE_CHANGED",
+                  "action": "slider_print_view_value_changed"
+                }
+              ],
               "min": 0,
               "max": 100,
               "mode": "NORMAL",
@@ -607,6 +648,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "Printing time",
                       "longMode": "WRAP",
                       "recolor": true
@@ -645,6 +687,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "image": "icn_time_1",
                       "pivotX": 0,
                       "pivotY": 0,
@@ -687,6 +730,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "10:52",
                       "longMode": "WRAP",
                       "recolor": false
@@ -715,7 +759,8 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "eventHandlers": []
                 },
                 {
                   "objID": "1b9e6922-b495-42a6-d146-1e3159c49309",
@@ -752,7 +797,8 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "eventHandlers": []
                 },
                 {
                   "objID": "eef942f5-06b2-4647-c200-0182f92e18cf",
@@ -811,6 +857,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "Printing time",
                       "longMode": "WRAP",
                       "recolor": true
@@ -849,6 +896,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "image": "icn_time_2",
                       "pivotX": 0,
                       "pivotY": 0,
@@ -859,7 +907,7 @@
                       "objID": "cb221229-a47f-403a-897a-7b6e2d96e205",
                       "type": "LVGLLabelWidget",
                       "left": 60,
-                      "top": 10,
+                      "top": 11,
                       "width": 70,
                       "height": 29,
                       "customInputs": [],
@@ -891,6 +939,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "08:25",
                       "longMode": "WRAP",
                       "recolor": false
@@ -919,7 +968,8 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "eventHandlers": []
                 }
               ],
               "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
@@ -954,7 +1004,8 @@
                     }
                   }
                 }
-              }
+              },
+              "eventHandlers": []
             },
             {
               "objID": "a33bf6b6-ed71-4590-993c-648af11f49fc",
@@ -1034,6 +1085,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "Head Temp.",
                       "longMode": "WRAP",
                       "recolor": true
@@ -1072,6 +1124,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "image": "icn_head",
                       "pivotX": 0,
                       "pivotY": 0,
@@ -1114,6 +1167,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "195°",
                       "longMode": "WRAP",
                       "recolor": false
@@ -1154,6 +1208,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "/ 195°",
                       "longMode": "WRAP",
                       "recolor": false
@@ -1182,7 +1237,8 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "eventHandlers": []
                 },
                 {
                   "objID": "cc78ad54-227d-427e-c230-e57384a6b7e0",
@@ -1219,7 +1275,8 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "eventHandlers": []
                 },
                 {
                   "objID": "4313ff4c-6915-4a09-de93-0d9d4a6a2509",
@@ -1278,6 +1335,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "Bed Temp.",
                       "longMode": "WRAP",
                       "recolor": true
@@ -1316,6 +1374,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "image": "icn_bed",
                       "pivotX": 0,
                       "pivotY": 0,
@@ -1337,7 +1396,7 @@
                       },
                       "locked": false,
                       "timeline": [],
-                      "identifier": "Label Time 2",
+                      "identifier": "Label Time 3",
                       "leftUnit": "px",
                       "topUnit": "px",
                       "widthUnit": "content",
@@ -1358,6 +1417,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "65°",
                       "longMode": "WRAP",
                       "recolor": false
@@ -1398,6 +1458,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "text": "/ 65°",
                       "longMode": "WRAP",
                       "recolor": false
@@ -1426,7 +1487,8 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "eventHandlers": []
                 }
               ],
               "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
@@ -1461,7 +1523,8 @@
                     }
                   }
                 }
-              }
+              },
+              "eventHandlers": []
             },
             {
               "objID": "61b0cb36-923b-46a5-bc40-eaa926d8b796",
@@ -1560,6 +1623,7 @@
                               }
                             }
                           },
+                          "eventHandlers": [],
                           "image": "icn_pause",
                           "pivotX": 0,
                           "pivotY": 0,
@@ -1592,6 +1656,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "image": "btn_print_top_off",
                       "pivotX": 0,
                       "pivotY": 0,
@@ -1612,6 +1677,7 @@
                       }
                     }
                   },
+                  "eventHandlers": [],
                   "image": "btn_print_down",
                   "pivotX": 0,
                   "pivotY": 0,
@@ -1694,6 +1760,7 @@
                               }
                             }
                           },
+                          "eventHandlers": [],
                           "image": "icn_stop",
                           "pivotX": 0,
                           "pivotY": 0,
@@ -1721,6 +1788,7 @@
                           }
                         }
                       },
+                      "eventHandlers": [],
                       "image": "btn_print_top_off",
                       "pivotX": 0,
                       "pivotY": 0,
@@ -1741,6 +1809,7 @@
                       }
                     }
                   },
+                  "eventHandlers": [],
                   "image": "btn_print_down",
                   "pivotX": 0,
                   "pivotY": 0,
@@ -1766,7 +1835,8 @@
                     }
                   }
                 }
-              }
+              },
+              "eventHandlers": []
             }
           ],
           "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
@@ -1788,12 +1858,13 @@
                 }
               }
             }
-          }
+          },
+          "eventHandlers": []
         }
       ],
       "connectionLines": [],
       "localVariables": [],
-      "name": "Screen 1",
+      "name": "Screen 1 Print",
       "left": 0,
       "top": 0,
       "width": 800,
@@ -1829,6 +1900,7 @@
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
+          "eventHandlers": [],
           "image": "3d_printer_bg",
           "pivotX": 0,
           "pivotY": 0,
@@ -1838,7 +1910,7 @@
       ],
       "connectionLines": [],
       "localVariables": [],
-      "name": "Screen 2",
+      "name": "Screen 2 Move",
       "left": 0,
       "top": 0,
       "width": 800,
@@ -1874,6 +1946,7 @@
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
+          "eventHandlers": [],
           "image": "3d_printer_bg",
           "pivotX": 0,
           "pivotY": 0,
@@ -1883,7 +1956,7 @@
       ],
       "connectionLines": [],
       "localVariables": [],
-      "name": "Screen 3",
+      "name": "Screen 3 Setting",
       "left": 0,
       "top": 0,
       "width": 800,

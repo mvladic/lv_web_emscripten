@@ -7,7 +7,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(lvgl)
 add_subdirectory(lv_drivers)
-file(GLOB MY_SOURCES "./*.c")
+file(GLOB MY_SOURCES "./*.c" "./ui/*.c")
 set(SOURCES ${MY_SOURCES})
 
 add_executable(index ${SOURCES} ${INCLUDES})
