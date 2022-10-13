@@ -58,3 +58,5 @@ lvgl.wasm
 # CMake output
 build
 .vscode
+
+lvgl-demo.eez-project-ui-state
