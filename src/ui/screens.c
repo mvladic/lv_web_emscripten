@@ -2,11 +2,70 @@
 #include "images.h"
 #include "fonts.h"
 #include "actions.h"
+#include "../flow.h"
+
+typedef struct {
+    unsigned page_index;
+    unsigned component_index;
+    unsigned output_index;
+} FlowEventCallbackData;
+
+void flow_event_callback_delete_user_data(lv_event_t *e) {
+    lv_mem_free(e->user_data);
+}
+
+static void event_handler_cb_screen_1_print_btn_menu_move_s1(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        FlowEventCallbackData *data = (FlowEventCallbackData *)e->user_data;
+        flowPropagateValue(data->page_index, data->component_index, data->output_index);
+    }
+}
+
+static void event_handler_cb_screen_1_print_btn_menu_setting_s1(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        FlowEventCallbackData *data = (FlowEventCallbackData *)e->user_data;
+        flowPropagateValue(data->page_index, data->component_index, data->output_index);
+    }
+}
 
 static void event_handler_cb_screen_1_print_slider_print_view(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     if (event == LV_EVENT_VALUE_CHANGED) {
         action_slider_print_view_value_changed(e);
+    }
+}
+
+static void event_handler_cb_screen_2_move_btn_menu_print_s1(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        FlowEventCallbackData *data = (FlowEventCallbackData *)e->user_data;
+        flowPropagateValue(data->page_index, data->component_index, data->output_index);
+    }
+}
+
+static void event_handler_cb_screen_2_move_btn_menu_setting_s1(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        FlowEventCallbackData *data = (FlowEventCallbackData *)e->user_data;
+        flowPropagateValue(data->page_index, data->component_index, data->output_index);
+    }
+}
+
+static void event_handler_cb_screen_3_setting_btn_menu_print_s1(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        FlowEventCallbackData *data = (FlowEventCallbackData *)e->user_data;
+        flowPropagateValue(data->page_index, data->component_index, data->output_index);
+    }
+}
+
+static void event_handler_cb_screen_3_setting_btn_menu_move_s1(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        FlowEventCallbackData *data = (FlowEventCallbackData *)e->user_data;
+        flowPropagateValue(data->page_index, data->component_index, data->output_index);
     }
 }
 
@@ -109,7 +168,13 @@ screen_1_print *create_screen_1_print() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 162);
             lv_img_set_src(obj, &img_btn_move);
-            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
+            FlowEventCallbackData *data = (FlowEventCallbackData *)lv_mem_alloc(sizeof(FlowEventCallbackData));
+            data->page_index = 0;
+            data->component_index = 7;
+            data->output_index = 1;
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_btn_menu_move_s1, LV_EVENT_ALL, data);
+            lv_obj_add_event_cb(obj, flow_event_callback_delete_user_data, LV_EVENT_DELETE, data);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -121,7 +186,13 @@ screen_1_print *create_screen_1_print() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 160);
             lv_img_set_src(obj, &img_btn_setting);
-            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
+            FlowEventCallbackData *data = (FlowEventCallbackData *)lv_mem_alloc(sizeof(FlowEventCallbackData));
+            data->page_index = 0;
+            data->component_index = 8;
+            data->output_index = 1;
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_btn_menu_setting_s1, LV_EVENT_ALL, data);
+            lv_obj_add_event_cb(obj, flow_event_callback_delete_user_data, LV_EVENT_DELETE, data);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_align(obj, LV_ALIGN_BOTTOM_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -625,6 +696,53 @@ screen_2_move *create_screen_2_move() {
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
         }
+        {
+            // BTN Menu Print S1
+            lv_obj_t *obj = lv_img_create(parent_obj);
+            screen->obj_btn_menu_print_s1 = obj;
+            lv_obj_set_pos(obj, 0, 0);
+            lv_obj_set_size(obj, 79, 160);
+            lv_img_set_src(obj, &img_btn_print);
+            FlowEventCallbackData *data = (FlowEventCallbackData *)lv_mem_alloc(sizeof(FlowEventCallbackData));
+            data->page_index = 1;
+            data->component_index = 0;
+            data->output_index = 1;
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_move_btn_menu_print_s1, LV_EVENT_ALL, data);
+            lv_obj_add_event_cb(obj, flow_event_callback_delete_user_data, LV_EVENT_DELETE, data);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
+            lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+            lv_obj_set_style_align(obj, LV_ALIGN_TOP_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
+        {
+            // BTN Menu Move S1
+            lv_obj_t *obj = lv_img_create(parent_obj);
+            screen->obj_btn_menu_move_s1 = obj;
+            lv_obj_set_pos(obj, 0, 0);
+            lv_obj_set_size(obj, 79, 162);
+            lv_img_set_src(obj, &img_btn_move);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
+            lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+            lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
+        {
+            // BTN Menu Setting S1
+            lv_obj_t *obj = lv_img_create(parent_obj);
+            screen->obj_btn_menu_setting_s1 = obj;
+            lv_obj_set_pos(obj, 0, 0);
+            lv_obj_set_size(obj, 79, 160);
+            lv_img_set_src(obj, &img_btn_setting);
+            FlowEventCallbackData *data = (FlowEventCallbackData *)lv_mem_alloc(sizeof(FlowEventCallbackData));
+            data->page_index = 1;
+            data->component_index = 3;
+            data->output_index = 1;
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_move_btn_menu_setting_s1, LV_EVENT_ALL, data);
+            lv_obj_add_event_cb(obj, flow_event_callback_delete_user_data, LV_EVENT_DELETE, data);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
+            lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+            lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_align(obj, LV_ALIGN_BOTTOM_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
     }
     return screen;
 }
@@ -646,6 +764,53 @@ screen_3_setting *create_screen_3_setting() {
             lv_img_set_src(obj, &img_3d_printer_bg);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+        }
+        {
+            // BTN Menu Print S1
+            lv_obj_t *obj = lv_img_create(parent_obj);
+            screen->obj_btn_menu_print_s1 = obj;
+            lv_obj_set_pos(obj, 0, 0);
+            lv_obj_set_size(obj, 79, 160);
+            lv_img_set_src(obj, &img_btn_print);
+            FlowEventCallbackData *data = (FlowEventCallbackData *)lv_mem_alloc(sizeof(FlowEventCallbackData));
+            data->page_index = 2;
+            data->component_index = 0;
+            data->output_index = 1;
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_3_setting_btn_menu_print_s1, LV_EVENT_ALL, data);
+            lv_obj_add_event_cb(obj, flow_event_callback_delete_user_data, LV_EVENT_DELETE, data);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
+            lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+            lv_obj_set_style_align(obj, LV_ALIGN_TOP_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
+        {
+            // BTN Menu Move S1
+            lv_obj_t *obj = lv_img_create(parent_obj);
+            screen->obj_btn_menu_move_s1 = obj;
+            lv_obj_set_pos(obj, 0, 0);
+            lv_obj_set_size(obj, 79, 162);
+            lv_img_set_src(obj, &img_btn_move);
+            FlowEventCallbackData *data = (FlowEventCallbackData *)lv_mem_alloc(sizeof(FlowEventCallbackData));
+            data->page_index = 2;
+            data->component_index = 2;
+            data->output_index = 1;
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_3_setting_btn_menu_move_s1, LV_EVENT_ALL, data);
+            lv_obj_add_event_cb(obj, flow_event_callback_delete_user_data, LV_EVENT_DELETE, data);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
+            lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+            lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
+        {
+            // BTN Menu Setting S1
+            lv_obj_t *obj = lv_img_create(parent_obj);
+            screen->obj_btn_menu_setting_s1 = obj;
+            lv_obj_set_pos(obj, 0, 0);
+            lv_obj_set_size(obj, 79, 160);
+            lv_img_set_src(obj, &img_btn_setting);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
+            lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
+            lv_obj_set_style_align(obj, LV_ALIGN_BOTTOM_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
     }
     return screen;

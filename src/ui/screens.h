@@ -3,6 +3,10 @@
 
 #include "lvgl/lvgl.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct screen_1_print_t {
     lv_obj_t *screen_obj;
     
@@ -55,6 +59,9 @@ typedef struct screen_2_move_t {
     lv_obj_t *screen_obj;
     
     lv_obj_t *obj_background;
+    lv_obj_t *obj_btn_menu_print_s1;
+    lv_obj_t *obj_btn_menu_move_s1;
+    lv_obj_t *obj_btn_menu_setting_s1;
 } screen_2_move;
 
 screen_2_move *create_screen_2_move();
@@ -63,10 +70,17 @@ typedef struct screen_3_setting_t {
     lv_obj_t *screen_obj;
     
     lv_obj_t *obj_background;
+    lv_obj_t *obj_btn_menu_print_s1;
+    lv_obj_t *obj_btn_menu_move_s1;
+    lv_obj_t *obj_btn_menu_setting_s1;
 } screen_3_setting;
 
 screen_3_setting *create_screen_3_setting();
 
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /*EEZ_LVGL_UI_SCREENS_H*/

@@ -23,12 +23,12 @@
         {
           "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
           "fileName": "screens.h",
-          "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n#include \"lvgl/lvgl.h\"\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n#include \"lvgl/lvgl.h\"\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
         },
         {
           "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
           "fileName": "screens.c",
-          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}"
+          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"../flow.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}"
         },
         {
           "objID": "81fa9cb7-33e4-4272-9340-49a50037b327",
@@ -52,13 +52,13 @@
         },
         {
           "objID": "9c770003-b028-4a8b-9447-fea072e67b3a",
-          "fileName": "flow.h",
-          "template": "#pragma once\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ENUM}\n\n//${eez-studio DATA_FUNCS_DECL}\n\n//${eez-studio DATA_ARRAY_DECL}\n\n//${eez-studio ACTIONS_ENUM}\n\n//${eez-studio ACTIONS_FUNCS_DECL}\n\n//${eez-studio ACTIONS_ARRAY_DECL}\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
+          "fileName": "flow_def.h",
+          "template": "#pragma once\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\n#include \"lvgl/lvgl.h\"\n\nnamespace eez {\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace eez\n"
         },
         {
           "objID": "0f3ea37c-f0d3-4061-c693-76b52bd9d632",
-          "fileName": "flow.cpp",
-          "template": "#include \"document.h\"\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ARRAY_DEF}\n\n//${eez-studio ACTIONS_ARRAY_DEF}\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
+          "fileName": "flow_def.cpp",
+          "template": "#include \"flow_def.h\"\n\nnamespace eez {\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n} // namespace eez\n"
         }
       ],
       "destinationFolder": "src\\ui"
@@ -591,6 +591,7 @@
                 {
                   "objID": "f94c5e78-3ca0-4515-d676-a6fb68cca328",
                   "trigger": "VALUE_CHANGED",
+                  "handlerType": "action",
                   "action": "slider_print_view_value_changed"
                 }
               ],

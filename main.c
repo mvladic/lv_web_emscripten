@@ -20,6 +20,7 @@
 
 #include "examplelist.h"
 
+#include "src/flow.h"
 #include "src/ui/screens.h"
 
 /*********************
@@ -85,8 +86,7 @@ int main(int argc, char ** argv)
         // extern void CHOSEN_DEMO(void);
         // CHOSEN_DEMO();
 
-        screen_1_print *screen_1_print = create_screen_1_print();
-        lv_disp_load_scr(screen_1_print->screen_obj);
+        flowInit();
     }
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
@@ -97,6 +97,8 @@ void do_loop(void *arg)
     /* Periodically call the lv_task handler.
      * It could be done in a timer interrupt or an OS task too.*/
     lv_task_handler();
+
+    flowTick();
 
     SDL_Event event;
     

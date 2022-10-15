@@ -6,8 +6,8 @@
 extern "C" {
 #endif
 
-void flowInit(uint32_t wasmModuleId, uint8_t *assets, uint32_t assetsSize);
-bool flowTick();
+void flowInit();
+void flowTick();
 void flowOnPageLoaded(unsigned pageIndex);
 void flowPropagateValue(unsigned pageIndex, unsigned componentIndex, unsigned outputIndex);
 

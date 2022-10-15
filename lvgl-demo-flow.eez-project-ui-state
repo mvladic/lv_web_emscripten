@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedRootObject": "/settings",
+    "selectedRootObject": "/pages",
     "selectedPageObject": "/pages/0"
   },
   "layoutModel": {
@@ -34,6 +34,7 @@
           },
           {
             "type": "border",
+            "selected": 1,
             "location": "bottom",
             "children": [
               {
@@ -80,7 +81,8 @@
                   "component": "navigation",
                   "enableClose": false
                 }
-              ]
+              ],
+              "active": true
             },
             {
               "type": "tabset",
@@ -98,8 +100,7 @@
                   "component": "editors",
                   "enableClose": false
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -300,17 +301,8 @@
                           {
                             "type": "tabset",
                             "id": "#1b73cf1a-2af2-4ee3-84d8-0a8667b8a8bd",
+                            "selected": 2,
                             "children": [
-                              {
-                                "type": "tab",
-                                "id": "#35984a99-8909-4952-aade-b7949ef9bbaf",
-                                "name": "Settings / Build",
-                                "component": "editor",
-                                "config": {
-                                  "objectPath": "/settings",
-                                  "subObjectPath": "/settings"
-                                }
-                              },
                               {
                                 "type": "tab",
                                 "id": "#9e41b7f1-5fed-4eed-accf-33131b0febd2",
@@ -916,7 +908,12 @@
       "selection": {
         "1": {},
         "2": {},
-        "4": {}
+        "4": {},
+        "5": {
+          "0": {
+            "$selected": true
+          }
+        }
       },
       "transform": {
         "translate": {
@@ -952,7 +949,11 @@
       }
     },
     "/pages/2[flow-state]": {
-      "selection": {},
+      "selection": {
+        "2": {
+          "$selected": true
+        }
+      },
       "transform": {
         "translate": {
           "x": -400,
@@ -970,7 +971,7 @@
   },
   "activeOutputSection": 0,
   "pageEditorFrontFace": false,
-  "pageRuntimeFrontFace": false,
+  "pageRuntimeFrontFace": true,
   "breakpoints": {},
   "watchExpressions": [],
   "showComponentDescriptions": true,

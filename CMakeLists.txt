@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.12)
 project (lv_emscripten)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -s USE_SDL=2")
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -O2 -s USE_SDL=2")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s INITIAL_MEMORY=83886080 -sLLD_REPORT_UNDEFINED")
 
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(lvgl)
 add_subdirectory(lv_drivers)
-file(GLOB MY_SOURCES "./*.c" "./ui/*.c")
+file(GLOB MY_SOURCES "./*.c")
 set(SOURCES ${MY_SOURCES})
 
 
@@ -66,6 +67,17 @@ endforeach(TMP_PATH)
 
 # exclude libscpi
 set(EXCLUDE_DIR "./eez/libs/libscpi")
+
+foreach(TMP_PATH ${src_eez})
+    string(FIND ${TMP_PATH} ${EXCLUDE_DIR} EXCLUDE_DIR_FOUND)
+
+    if(NOT ${EXCLUDE_DIR_FOUND} EQUAL -1)
+        list(REMOVE_ITEM src_eez ${TMP_PATH})
+    endif()
+endforeach(TMP_PATH)
+
+# exclude agg
+set(EXCLUDE_DIR "../eez/libs/agg")
 
 foreach(TMP_PATH ${src_eez})
     string(FIND ${TMP_PATH} ${EXCLUDE_DIR} EXCLUDE_DIR_FOUND)
