@@ -49,6 +49,16 @@
           "objID": "bad0addd-10de-48f7-e57e-b40fce3e7c45",
           "fileName": "fonts.h",
           "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n#include \"lvgl/lvgl.h\"\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+        },
+        {
+          "objID": "9c770003-b028-4a8b-9447-fea072e67b3a",
+          "fileName": "flow.h",
+          "template": "#pragma once\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ENUM}\n\n//${eez-studio DATA_FUNCS_DECL}\n\n//${eez-studio DATA_ARRAY_DECL}\n\n//${eez-studio ACTIONS_ENUM}\n\n//${eez-studio ACTIONS_FUNCS_DECL}\n\n//${eez-studio ACTIONS_ARRAY_DECL}\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
+        },
+        {
+          "objID": "0f3ea37c-f0d3-4061-c693-76b52bd9d632",
+          "fileName": "flow.cpp",
+          "template": "#include \"document.h\"\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ARRAY_DEF}\n\n//${eez-studio ACTIONS_ARRAY_DEF}\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
         }
       ],
       "destinationFolder": "src\\ui"
@@ -377,7 +387,7 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "localStyles": {
@@ -391,7 +401,14 @@
               }
             }
           },
-          "eventHandlers": [],
+          "eventHandlers": [
+            {
+              "objID": "ea0c74e4-126e-4826-a3cb-bf79c9e43ead",
+              "trigger": "CLICKED",
+              "handlerType": "flow",
+              "action": "action:slider_print_view_value_changed"
+            }
+          ],
           "image": "btn_move",
           "pivotX": 0,
           "pivotY": 0,
@@ -419,7 +436,7 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "localStyles": {
@@ -433,7 +450,14 @@
               }
             }
           },
-          "eventHandlers": [],
+          "eventHandlers": [
+            {
+              "objID": "8ced0ce6-8f4a-4304-f73e-aa9fd1d45f89",
+              "trigger": "CLICKED",
+              "handlerType": "flow",
+              "action": "action:slider_print_view_value_changed"
+            }
+          ],
           "image": "btn_setting",
           "pivotX": 0,
           "pivotY": 0,
@@ -567,7 +591,6 @@
                 {
                   "objID": "f94c5e78-3ca0-4515-d676-a6fb68cca328",
                   "trigger": "VALUE_CHANGED",
-                  "handlerType": "action",
                   "action": "slider_print_view_value_changed"
                 }
               ],
@@ -1867,9 +1890,46 @@
             }
           },
           "eventHandlers": []
+        },
+        {
+          "objID": "e37a6bd9-101d-4e73-a9e5-3aec6dba3918",
+          "type": "ShowPageActionComponent",
+          "left": 135,
+          "top": -66,
+          "width": 96,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Screen 2 Move"
+        },
+        {
+          "objID": "0729952f-ad31-42a7-8208-7d6a4f5465ed",
+          "type": "ShowPageActionComponent",
+          "left": 135,
+          "top": 500,
+          "width": 115,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Screen 3 Setting"
         }
       ],
-      "connectionLines": [],
+      "connectionLines": [
+        {
+          "objID": "3588b6f6-8ea7-4832-d099-8b1442e7abca",
+          "source": "137bb72b-9220-4820-a734-80ce0e7f20dd",
+          "output": "CLICKED",
+          "target": "e37a6bd9-101d-4e73-a9e5-3aec6dba3918",
+          "input": "@seqin"
+        },
+        {
+          "objID": "e46de571-351c-4b1e-8e7e-141f51960101",
+          "source": "36fc95b8-5d29-4840-8b88-bdebc3f91a2f",
+          "output": "CLICKED",
+          "target": "0729952f-ad31-42a7-8208-7d6a4f5465ed",
+          "input": "@seqin"
+        }
+      ],
       "localVariables": [],
       "name": "Screen 1 Print",
       "left": 0,
@@ -1913,9 +1973,185 @@
           "pivotY": 0,
           "zoom": 256,
           "angle": 0
+        },
+        {
+          "objID": "fb416146-101f-4c6b-a246-5ab36bf2a53b",
+          "type": "LVGLImageWidget",
+          "left": 0,
+          "top": 0,
+          "width": 79,
+          "height": 160,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "2003d3a1-2abb-46d5-d5db-ec69eb030eae",
+            "inheritFrom": "default"
+          },
+          "locked": false,
+          "timeline": [],
+          "identifier": "BTN Menu Print S1",
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "localStyles": {
+            "objID": "243325fb-f806-4260-e0b5-007117e2f643",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "align": "TOP_LEFT",
+                  "opa": 0
+                }
+              }
+            }
+          },
+          "eventHandlers": [
+            {
+              "objID": "10d1b0fa-5682-460e-8c5b-d9f6514c8d60",
+              "trigger": "CLICKED",
+              "handlerType": "flow",
+              "action": "action:slider_print_view_value_changed"
+            }
+          ],
+          "image": "btn_print",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "59228fd9-b383-4863-afa8-1affafc59dc1",
+          "type": "LVGLImageWidget",
+          "left": 0,
+          "top": 0,
+          "width": 79,
+          "height": 162,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "deb19ff4-ff82-404c-c87c-3d4bd9e6d671",
+            "inheritFrom": "default"
+          },
+          "locked": false,
+          "timeline": [],
+          "identifier": "BTN Menu Move S1",
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "localStyles": {
+            "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "align": "LEFT_MID"
+                }
+              }
+            }
+          },
+          "eventHandlers": [],
+          "image": "btn_move",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "bddb0e1f-8131-433a-ab67-a27a3d51367c",
+          "type": "LVGLImageWidget",
+          "left": 0,
+          "top": 0,
+          "width": 79,
+          "height": 160,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "c51f3c6a-2e56-44f0-fb0c-e28299ce29a2",
+            "inheritFrom": "default"
+          },
+          "locked": false,
+          "timeline": [],
+          "identifier": "BTN Menu Setting S1",
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "localStyles": {
+            "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "opa": 0,
+                  "align": "BOTTOM_LEFT"
+                }
+              }
+            }
+          },
+          "eventHandlers": [
+            {
+              "objID": "2f5d762a-79d9-4cb1-ffab-a7dbd0956aae",
+              "trigger": "CLICKED",
+              "handlerType": "flow",
+              "action": "action:slider_print_view_value_changed"
+            }
+          ],
+          "image": "btn_setting",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "86ec9e01-81c0-4433-ab70-8935c49f7486",
+          "type": "ShowPageActionComponent",
+          "left": 153,
+          "top": -78,
+          "width": 102,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Screen 1 Print"
+        },
+        {
+          "objID": "603da8be-9a41-4167-9cd0-9616d3f116d1",
+          "type": "ShowPageActionComponent",
+          "left": 153,
+          "top": 515,
+          "width": 115,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Screen 3 Setting"
         }
       ],
-      "connectionLines": [],
+      "connectionLines": [
+        {
+          "objID": "cfbf5e53-4cc1-41ed-9956-8da438c55764",
+          "source": "fb416146-101f-4c6b-a246-5ab36bf2a53b",
+          "output": "CLICKED",
+          "target": "86ec9e01-81c0-4433-ab70-8935c49f7486",
+          "input": "@seqin"
+        },
+        {
+          "objID": "6c6aefca-03f6-46c6-e89b-9adae333d08e",
+          "source": "bddb0e1f-8131-433a-ab67-a27a3d51367c",
+          "output": "CLICKED",
+          "target": "603da8be-9a41-4167-9cd0-9616d3f116d1",
+          "input": "@seqin"
+        }
+      ],
       "localVariables": [],
       "name": "Screen 2 Move",
       "left": 0,
@@ -1959,9 +2195,185 @@
           "pivotY": 0,
           "zoom": 256,
           "angle": 0
+        },
+        {
+          "objID": "fb416146-101f-4c6b-a246-5ab36bf2a53a",
+          "type": "LVGLImageWidget",
+          "left": 0,
+          "top": 0,
+          "width": 79,
+          "height": 160,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "2003d3a1-2abb-46d5-d5db-ec69eb030eae",
+            "inheritFrom": "default"
+          },
+          "locked": false,
+          "timeline": [],
+          "identifier": "BTN Menu Print S1",
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "localStyles": {
+            "objID": "243325fb-f806-4260-e0b5-007117e2f643",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "align": "TOP_LEFT",
+                  "opa": 0
+                }
+              }
+            }
+          },
+          "eventHandlers": [
+            {
+              "objID": "72b004ca-25df-4cdb-dc36-19b2334f464c",
+              "trigger": "CLICKED",
+              "handlerType": "flow",
+              "action": "action:slider_print_view_value_changed"
+            }
+          ],
+          "image": "btn_print",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "59228fd9-b383-4863-afa8-1affafc59dc1",
+          "type": "LVGLImageWidget",
+          "left": 0,
+          "top": 0,
+          "width": 79,
+          "height": 162,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "deb19ff4-ff82-404c-c87c-3d4bd9e6d671",
+            "inheritFrom": "default"
+          },
+          "locked": false,
+          "timeline": [],
+          "identifier": "BTN Menu Move S1",
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "localStyles": {
+            "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "align": "LEFT_MID",
+                  "opa": 0
+                }
+              }
+            }
+          },
+          "eventHandlers": [
+            {
+              "objID": "3acef641-0f1c-4133-84dd-c6219ce9607c",
+              "trigger": "CLICKED",
+              "handlerType": "flow",
+              "action": "action:slider_print_view_value_changed"
+            }
+          ],
+          "image": "btn_move",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "bddb0e1f-8131-433a-ab67-a27a3d51367b",
+          "type": "LVGLImageWidget",
+          "left": 0,
+          "top": 0,
+          "width": 79,
+          "height": 160,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "c51f3c6a-2e56-44f0-fb0c-e28299ce29a2",
+            "inheritFrom": "default"
+          },
+          "locked": false,
+          "timeline": [],
+          "identifier": "BTN Menu Setting S1",
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "localStyles": {
+            "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "align": "BOTTOM_LEFT"
+                }
+              }
+            }
+          },
+          "eventHandlers": [],
+          "image": "btn_setting",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "86ec9e01-81c0-4433-ab70-8935c49f7485",
+          "type": "ShowPageActionComponent",
+          "left": 150,
+          "top": -76,
+          "width": 102,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Screen 1 Print"
+        },
+        {
+          "objID": "603da8be-9a41-4167-9cd0-9616d3f116d0",
+          "type": "ShowPageActionComponent",
+          "left": 150,
+          "top": 500,
+          "width": 96,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Screen 2 Move"
         }
       ],
-      "connectionLines": [],
+      "connectionLines": [
+        {
+          "objID": "be231512-df21-4985-914e-69cd167ac5e6",
+          "source": "fb416146-101f-4c6b-a246-5ab36bf2a53a",
+          "output": "CLICKED",
+          "target": "86ec9e01-81c0-4433-ab70-8935c49f7485",
+          "input": "@seqin"
+        },
+        {
+          "objID": "f5956533-dc4b-44dc-8074-db6f2e3e8988",
+          "source": "59228fd9-b383-4863-afa8-1affafc59dc1",
+          "output": "CLICKED",
+          "target": "603da8be-9a41-4167-9cd0-9616d3f116d0",
+          "input": "@seqin"
+        }
+      ],
       "localVariables": [],
       "name": "Screen 3 Setting",
       "left": 0,

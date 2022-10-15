@@ -6,3 +6,6 @@
 	path = lv_drivers
 	url = https://github.com/littlevgl/lv_drivers.git
 	branch = master
+[submodule "eez"]
+	path = eez
+	url = https://github.com/eez-open/eez-framework

@@ -20,7 +20,7 @@
 
 #include "examplelist.h"
 
-#include "ui/screens.h"
+#include "src/ui/screens.h"
 
 /*********************
  *      DEFINES
