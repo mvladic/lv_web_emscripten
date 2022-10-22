@@ -1890,41 +1890,51 @@
           "eventHandlers": []
         },
         {
-          "objID": "e37a6bd9-101d-4e73-a9e5-3aec6dba3918",
-          "type": "ShowPageActionComponent",
-          "left": 135,
-          "top": -66,
-          "width": 96,
+          "objID": "f0cd3e0b-3298-4c43-e641-1a6d0c13e86e",
+          "type": "LVGLActionComponent",
+          "left": 145,
+          "top": -87,
+          "width": 293,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
-          "page": "Screen 2 Move"
+          "description": "",
+          "action": "CHANGE_SCREEN",
+          "screen": "Screen 2 Move",
+          "fadeMode": "FADE_IN",
+          "speed": 200,
+          "delay": 0
         },
         {
-          "objID": "0729952f-ad31-42a7-8208-7d6a4f5465ed",
-          "type": "ShowPageActionComponent",
-          "left": 135,
-          "top": 500,
-          "width": 115,
+          "objID": "87883f04-40a0-428b-97ae-58943b6763b4",
+          "type": "LVGLActionComponent",
+          "left": 145,
+          "top": 512,
+          "width": 312,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
-          "page": "Screen 3 Setting"
+          "description": "",
+          "action": "CHANGE_SCREEN",
+          "screen": "Screen 3 Setting",
+          "fadeMode": "FADE_IN",
+          "speed": 200,
+          "delay": 0
         }
       ],
       "connectionLines": [
         {
-          "objID": "3588b6f6-8ea7-4832-d099-8b1442e7abca",
+          "objID": "3c090e1d-0595-4fea-f24b-541f029e25e4",
           "source": "137bb72b-9220-4820-a734-80ce0e7f20dd",
           "output": "CLICKED",
-          "target": "e37a6bd9-101d-4e73-a9e5-3aec6dba3918",
+          "target": "f0cd3e0b-3298-4c43-e641-1a6d0c13e86e",
           "input": "@seqin"
         },
         {
-          "objID": "e46de571-351c-4b1e-8e7e-141f51960101",
+          "objID": "961a3ae5-54fc-4878-c3b4-5e80497c986e",
           "source": "36fc95b8-5d29-4840-8b88-bdebc3f91a2f",
           "output": "CLICKED",
-          "target": "0729952f-ad31-42a7-8208-7d6a4f5465ed",
+          "target": "87883f04-40a0-428b-97ae-58943b6763b4",
           "input": "@seqin"
         }
       ],
@@ -2127,41 +2137,51 @@
           "angle": 0
         },
         {
-          "objID": "86ec9e01-81c0-4433-ab70-8935c49f7486",
-          "type": "ShowPageActionComponent",
-          "left": 153,
-          "top": -78,
-          "width": 102,
+          "objID": "8d4b259c-93fe-4fdd-d9e0-6fb10281fe54",
+          "type": "LVGLActionComponent",
+          "left": 131,
+          "top": -82,
+          "width": 299,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
-          "page": "Screen 1 Print"
+          "description": "",
+          "action": "CHANGE_SCREEN",
+          "screen": "Screen 1 Print",
+          "fadeMode": "FADE_IN",
+          "speed": 200,
+          "delay": 0
         },
         {
-          "objID": "603da8be-9a41-4167-9cd0-9616d3f116d1",
-          "type": "ShowPageActionComponent",
-          "left": 153,
-          "top": 515,
-          "width": 115,
+          "objID": "6fd06dbf-5bc2-4544-efea-79fec7ef213c",
+          "type": "LVGLActionComponent",
+          "left": 131,
+          "top": 511,
+          "width": 312,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
-          "page": "Screen 3 Setting"
+          "description": "",
+          "action": "CHANGE_SCREEN",
+          "screen": "Screen 3 Setting",
+          "fadeMode": "FADE_IN",
+          "speed": 200,
+          "delay": 0
         }
       ],
       "connectionLines": [
         {
-          "objID": "cfbf5e53-4cc1-41ed-9956-8da438c55764",
+          "objID": "5b7f5e46-0069-4119-88c6-13cf7d25b979",
           "source": "fb416146-101f-4c6b-a246-5ab36bf2a53b",
           "output": "CLICKED",
-          "target": "86ec9e01-81c0-4433-ab70-8935c49f7486",
+          "target": "8d4b259c-93fe-4fdd-d9e0-6fb10281fe54",
           "input": "@seqin"
         },
         {
-          "objID": "6c6aefca-03f6-46c6-e89b-9adae333d08e",
+          "objID": "f0830502-153b-4441-c8bc-216d1c1a0402",
           "source": "bddb0e1f-8131-433a-ab67-a27a3d51367c",
           "output": "CLICKED",
-          "target": "603da8be-9a41-4167-9cd0-9616d3f116d1",
+          "target": "6fd06dbf-5bc2-4544-efea-79fec7ef213c",
           "input": "@seqin"
         }
       ],
@@ -2349,41 +2369,51 @@
           "angle": 0
         },
         {
-          "objID": "86ec9e01-81c0-4433-ab70-8935c49f7485",
-          "type": "ShowPageActionComponent",
-          "left": 150,
-          "top": -76,
-          "width": 102,
+          "objID": "70b5867d-2e4d-4ba7-bc03-111aaec971aa",
+          "type": "LVGLActionComponent",
+          "left": 154,
+          "top": -84,
+          "width": 299,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
-          "page": "Screen 1 Print"
+          "description": "",
+          "action": "CHANGE_SCREEN",
+          "screen": "Screen 1 Print",
+          "fadeMode": "FADE_IN",
+          "speed": 200,
+          "delay": 0
         },
         {
-          "objID": "603da8be-9a41-4167-9cd0-9616d3f116d0",
-          "type": "ShowPageActionComponent",
-          "left": 150,
-          "top": 500,
-          "width": 96,
+          "objID": "56e47b3b-2259-4554-d74a-b9f613e80e96",
+          "type": "LVGLActionComponent",
+          "left": 154,
+          "top": 509,
+          "width": 293,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
-          "page": "Screen 2 Move"
+          "description": "",
+          "action": "CHANGE_SCREEN",
+          "screen": "Screen 2 Move",
+          "fadeMode": "FADE_IN",
+          "speed": 200,
+          "delay": 0
         }
       ],
       "connectionLines": [
         {
-          "objID": "be231512-df21-4985-914e-69cd167ac5e6",
-          "source": "fb416146-101f-4c6b-a246-5ab36bf2a53a",
+          "objID": "b199c4e7-79c9-4e87-dfe2-dad5b100efb1",
+          "source": "59228fd9-b383-4863-afa8-1affafc59dc1",
           "output": "CLICKED",
-          "target": "86ec9e01-81c0-4433-ab70-8935c49f7485",
+          "target": "56e47b3b-2259-4554-d74a-b9f613e80e96",
           "input": "@seqin"
         },
         {
-          "objID": "f5956533-dc4b-44dc-8074-db6f2e3e8988",
-          "source": "59228fd9-b383-4863-afa8-1affafc59dc1",
+          "objID": "fad5c89e-e9eb-4ea1-eb0d-a3d81696537d",
+          "source": "fb416146-101f-4c6b-a246-5ab36bf2a53a",
           "output": "CLICKED",
-          "target": "603da8be-9a41-4167-9cd0-9616d3f116d0",
+          "target": "70b5867d-2e4d-4ba7-bc03-111aaec971aa",
           "input": "@seqin"
         }
       ],

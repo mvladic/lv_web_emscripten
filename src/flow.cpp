@@ -26,7 +26,7 @@ static screen_1_print *screen1;
 static screen_2_move *screen2;
 static screen_3_setting *screen3;
 
-void replacePageHook(int16_t pageId) {
+void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t delay) {
     eez::flow::onPageChanged(currentPageId, pageId);
     currentPageId = pageId;
 
@@ -34,17 +34,17 @@ void replacePageHook(int16_t pageId) {
         if (!screen1) {
             screen1 = create_screen_1_print();
         }
-        lv_scr_load(screen1->screen_obj);
+        lv_scr_load_anim(screen1->screen_obj, (lv_scr_load_anim_t)animType, speed, delay, false);
     } else if (pageId == 2) {
         if (!screen2) {
             screen2 = create_screen_2_move();
         }
-        lv_scr_load(screen2->screen_obj);
+        lv_scr_load_anim(screen2->screen_obj, (lv_scr_load_anim_t)animType, speed, delay, false);
     } else if (pageId == 3) {
         if (!screen3) {
             screen3 = create_screen_3_setting();
         }
-        lv_scr_load(screen3->screen_obj);
+        lv_scr_load_anim(screen3->screen_obj, (lv_scr_load_anim_t)animType, speed, delay, false);
     }
 }
 
@@ -58,7 +58,7 @@ extern "C" void flowInit() {
 
     eez::flow::start(eez::g_mainAssets);
 
-    replacePageHook(1);
+    replacePageHook(1, 0, 0, 0);
 }
 
 extern "C" void flowTick() {
