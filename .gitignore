@@ -60,3 +60,4 @@ build
 .vscode
 
 lvgl-demo.eez-project-ui-state
+lvgl-demo-flow.eez-project-ui-state
