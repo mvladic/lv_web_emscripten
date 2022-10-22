@@ -70,16 +70,7 @@
     "structures": [],
     "enums": []
   },
-  "actions": [
-    {
-      "objID": "cdaa227e-6d90-40b8-85a9-07521c85d28b",
-      "components": [],
-      "connectionLines": [],
-      "localVariables": [],
-      "name": "slider_print_view_value_changed",
-      "implementationType": "native"
-    }
-  ],
+  "actions": [],
   "pages": [
     {
       "objID": "cdaef1bd-3ea5-454d-d35b-6abdc2451e57",
@@ -177,6 +168,7 @@
               },
               "eventHandlers": [],
               "text": "The #ffffff squareline.gcode# word file is being printed",
+              "textType": "literal",
               "longMode": "WRAP",
               "recolor": true
             },
@@ -511,7 +503,7 @@
                   "type": "LVGLLabelWidget",
                   "left": 0,
                   "top": -40,
-                  "width": 54,
+                  "width": 226,
                   "height": 29,
                   "customInputs": [],
                   "customOutputs": [],
@@ -550,7 +542,8 @@
                     }
                   },
                   "eventHandlers": [],
-                  "text": "70%",
+                  "text": "slider_value + \"%\"",
+                  "textType": "expression",
                   "longMode": "WRAP",
                   "recolor": false
                 }
@@ -587,19 +580,14 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "f94c5e78-3ca0-4515-d676-a6fb68cca328",
-                  "trigger": "VALUE_CHANGED",
-                  "handlerType": "action",
-                  "action": "slider_print_view_value_changed"
-                }
-              ],
+              "eventHandlers": [],
               "min": 0,
               "max": 100,
               "mode": "NORMAL",
-              "value": 70,
-              "valueLeft": 0
+              "value": "slider_value",
+              "valueType": "expression",
+              "valueLeft": "slider_value_left",
+              "valueLeftType": "expression"
             },
             {
               "objID": "8113e947-a3a7-4efb-a89a-ca9d3c544243",
@@ -763,6 +751,7 @@
                       },
                       "eventHandlers": [],
                       "text": "10:52",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": false
                     }
@@ -890,6 +879,7 @@
                       },
                       "eventHandlers": [],
                       "text": "Printing time",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": true
                     },
@@ -972,6 +962,7 @@
                       },
                       "eventHandlers": [],
                       "text": "08:25",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": false
                     }
@@ -1118,6 +1109,7 @@
                       },
                       "eventHandlers": [],
                       "text": "Head Temp.",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": true
                     },
@@ -1200,6 +1192,7 @@
                       },
                       "eventHandlers": [],
                       "text": "195°",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": false
                     },
@@ -1241,6 +1234,7 @@
                       },
                       "eventHandlers": [],
                       "text": "/ 195°",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": false
                     }
@@ -1368,6 +1362,7 @@
                       },
                       "eventHandlers": [],
                       "text": "Bed Temp.",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": true
                     },
@@ -1450,6 +1445,7 @@
                       },
                       "eventHandlers": [],
                       "text": "65°",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": false
                     },
@@ -1491,6 +1487,7 @@
                       },
                       "eventHandlers": [],
                       "text": "/ 65°",
+                      "textType": "literal",
                       "longMode": "WRAP",
                       "recolor": false
                     }
@@ -1931,7 +1928,22 @@
           "input": "@seqin"
         }
       ],
-      "localVariables": [],
+      "localVariables": [
+        {
+          "objID": "c8b34629-3eea-4c1e-f379-8d32df799035",
+          "name": "slider_value",
+          "type": "integer",
+          "defaultValue": "70",
+          "persistent": false
+        },
+        {
+          "objID": "04e9933c-2dca-44d7-d8bc-d18cdea9777c",
+          "name": "slider_value_left",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
       "name": "Screen 1 Print",
       "left": 0,
       "top": 0,

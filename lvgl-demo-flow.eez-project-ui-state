@@ -35,6 +35,7 @@
           {
             "type": "border",
             "selected": 1,
+            "size": 165.5,
             "location": "bottom",
             "children": [
               {
@@ -81,13 +82,12 @@
                   "component": "navigation",
                   "enableClose": false
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 59.09215955983494,
+              "weight": 45.99724896836314,
               "enableDrop": false,
               "enableDrag": false,
               "enableClose": false,
@@ -105,7 +105,7 @@
             {
               "type": "row",
               "id": "#8aa38612-1a5d-4980-93e0-fb6333fed208",
-              "weight": 20.90784044016506,
+              "weight": 34.00275103163686,
               "children": [
                 {
                   "type": "tabset",
@@ -126,7 +126,8 @@
                       "component": "breakpointsPanel",
                       "enableClose": false
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -529,13 +530,13 @@
                       "component": "pages",
                       "enableClose": false
                     }
-                  ],
-                  "active": true
+                  ]
                 },
                 {
                   "type": "tabset",
                   "id": "#9dfc7cab-53b4-491e-9121-070f1c9da9f2",
                   "weight": 147.0737913486005,
+                  "selected": 1,
                   "children": [
                     {
                       "type": "tab",
@@ -551,7 +552,8 @@
                       "component": "local-vars",
                       "enableClose": false
                     }
-                  ]
+                  ],
+                  "active": true
                 }
               ]
             }
@@ -620,7 +622,8 @@
                       "component": "actions",
                       "enableClose": false
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -911,14 +914,27 @@
         "4": {},
         "5": {
           "0": {
+            "0": {},
             "$selected": true
+          },
+          "1": {
+            "0": {
+              "0": {}
+            },
+            "2": {}
+          },
+          "2": {
+            "0": {},
+            "2": {
+              "3": {}
+            }
           }
         }
       },
       "transform": {
         "translate": {
-          "x": -400,
-          "y": -240
+          "x": -415,
+          "y": -291
         },
         "scale": 1
       },

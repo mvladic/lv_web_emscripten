@@ -54,6 +54,7 @@ typedef struct screen_1_print_t {
 } screen_1_print;
 
 screen_1_print *create_screen_1_print();
+void tick_screen_1_print(screen_1_print *screen);
 
 typedef struct screen_2_move_t {
     lv_obj_t *screen_obj;
@@ -65,6 +66,7 @@ typedef struct screen_2_move_t {
 } screen_2_move;
 
 screen_2_move *create_screen_2_move();
+void tick_screen_2_move(screen_2_move *screen);
 
 typedef struct screen_3_setting_t {
     lv_obj_t *screen_obj;
@@ -76,6 +78,7 @@ typedef struct screen_3_setting_t {
 } screen_3_setting;
 
 screen_3_setting *create_screen_3_setting();
+void tick_screen_3_setting(screen_3_setting *screen);
 
 
 
