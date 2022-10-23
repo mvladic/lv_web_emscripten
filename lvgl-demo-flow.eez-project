@@ -486,7 +486,7 @@
             {
               "objID": "392e571d-eadb-4110-9112-88d4f71c7da8",
               "type": "LVGLSliderWidget",
-              "left": 0,
+              "left": -1,
               "top": -10,
               "width": 332,
               "height": 396,
@@ -2196,7 +2196,7 @@
           "type": "LVGLActionComponent",
           "left": 131,
           "top": -82,
-          "width": 299,
+          "width": 367,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -2213,7 +2213,7 @@
           "type": "LVGLActionComponent",
           "left": 131,
           "top": 511,
-          "width": 312,
+          "width": 379,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -2430,7 +2430,7 @@
           "type": "LVGLActionComponent",
           "left": 154,
           "top": -84,
-          "width": 299,
+          "width": 367,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -2447,7 +2447,7 @@
           "type": "LVGLActionComponent",
           "left": 154,
           "top": 509,
-          "width": 293,
+          "width": 361,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -2484,7 +2484,6 @@
       "height": 480
     }
   ],
-  "styles": [],
   "fonts": [
     {
       "objID": "9fd8f046-7f9b-4270-cec9-543efe63496b",
@@ -6326,11 +6325,6 @@
       "lvglSourceFilePath": "assets\\fonts\\ui_font_small_font.c"
     }
   ],
-  "texts": {
-    "objID": "97cfea92-accf-4b88-ebc4-ddb43a09bcea",
-    "languages": [],
-    "resources": []
-  },
   "bitmaps": [
     {
       "objID": "c24cc080-a241-46ab-b399-92fed98e9ea0",
