@@ -151,7 +151,7 @@
               "widthUnit": "content",
               "heightUnit": "content",
               "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "localStyles": {
@@ -166,7 +166,13 @@
                   }
                 }
               },
-              "eventHandlers": [],
+              "eventHandlers": [
+                {
+                  "objID": "34621131-ca82-4072-adf4-eeb20597546f",
+                  "trigger": "CLICKED",
+                  "handlerType": "flow"
+                }
+              ],
               "text": "The #ffffff squareline.gcode# word file is being printed",
               "textType": "literal",
               "longMode": "WRAP",
@@ -503,7 +509,7 @@
                   "type": "LVGLLabelWidget",
                   "left": 0,
                   "top": -40,
-                  "width": 226,
+                  "width": 244,
                   "height": 29,
                   "customInputs": [],
                   "customOutputs": [],
@@ -1894,7 +1900,7 @@
           "type": "LVGLActionComponent",
           "left": 145,
           "top": -87,
-          "width": 293,
+          "width": 361,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -1903,14 +1909,15 @@
           "screen": "Screen 2 Move",
           "fadeMode": "FADE_IN",
           "speed": 200,
-          "delay": 0
+          "delay": 0,
+          "animItems": []
         },
         {
           "objID": "87883f04-40a0-428b-97ae-58943b6763b4",
           "type": "LVGLActionComponent",
           "left": 145,
           "top": 512,
-          "width": 312,
+          "width": 379,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -1919,7 +1926,48 @@
           "screen": "Screen 3 Setting",
           "fadeMode": "FADE_IN",
           "speed": 200,
-          "delay": 0
+          "delay": 0,
+          "animItems": []
+        },
+        {
+          "objID": "d8dec8e3-44d7-42a0-ec67-8cb0b00178f0",
+          "type": "LVGLActionComponent",
+          "left": 573,
+          "top": -106,
+          "width": 490,
+          "height": 94,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "PLAY_ANIMATION",
+          "fadeMode": "FADE_ON",
+          "speed": 200,
+          "delay": 0,
+          "animTarget": "Label Header",
+          "animDelay": 0,
+          "animItems": [
+            {
+              "objID": "dc99f1ee-4448-4815-df01-143426dd803e",
+              "property": "POSITION_X",
+              "start": 0,
+              "end": 150,
+              "delay": 0,
+              "time": 250,
+              "relative": false,
+              "instant": false,
+              "path": "LINEAR"
+            },
+            {
+              "objID": "4f137656-8f67-4f3f-c7d1-30b6d5263635",
+              "property": "POSITION_X",
+              "start": 150,
+              "end": 0,
+              "delay": 300,
+              "time": 250,
+              "relative": false,
+              "instant": false,
+              "path": "LINEAR"
+            }
+          ]
         }
       ],
       "connectionLines": [
@@ -1935,6 +1983,13 @@
           "source": "36fc95b8-5d29-4840-8b88-bdebc3f91a2f",
           "output": "CLICKED",
           "target": "87883f04-40a0-428b-97ae-58943b6763b4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "5bb71474-c58d-44fe-81b8-80717edc793c",
+          "source": "5a2d18a5-b1d3-403a-953c-62835bc3acc5",
+          "output": "CLICKED",
+          "target": "d8dec8e3-44d7-42a0-ec67-8cb0b00178f0",
           "input": "@seqin"
         }
       ],
@@ -2150,7 +2205,8 @@
           "screen": "Screen 1 Print",
           "fadeMode": "FADE_IN",
           "speed": 200,
-          "delay": 0
+          "delay": 0,
+          "animItems": []
         },
         {
           "objID": "6fd06dbf-5bc2-4544-efea-79fec7ef213c",
@@ -2166,7 +2222,8 @@
           "screen": "Screen 3 Setting",
           "fadeMode": "FADE_IN",
           "speed": 200,
-          "delay": 0
+          "delay": 0,
+          "animItems": []
         }
       ],
       "connectionLines": [
@@ -2382,7 +2439,8 @@
           "screen": "Screen 1 Print",
           "fadeMode": "FADE_IN",
           "speed": 200,
-          "delay": 0
+          "delay": 0,
+          "animItems": []
         },
         {
           "objID": "56e47b3b-2259-4554-d74a-b9f613e80e96",
@@ -2398,7 +2456,8 @@
           "screen": "Screen 2 Move",
           "fadeMode": "FADE_IN",
           "speed": 200,
-          "delay": 0
+          "delay": 0,
+          "animItems": []
         }
       ],
       "connectionLines": [

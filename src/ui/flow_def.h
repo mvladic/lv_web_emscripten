@@ -18,6 +18,6 @@ enum ColorsEnum {
 	COLOR_ID_CUSTOM_UNDEFINED = 2
 };
 
-extern const uint8_t assets[1754];
+extern const uint8_t assets[1855];
 
 } // namespace eez

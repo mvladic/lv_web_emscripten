@@ -48,6 +48,24 @@ void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t
     }
 }
 
+static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
+    if (index == -1) {
+        return 0;
+    }
+
+    lv_obj_t **screen;
+
+    if (currentPageId == 1) {
+        screen = (lv_obj_t **)screen1;
+    } else if (currentPageId == 2) {
+        screen = (lv_obj_t **)screen2;
+    } else if (currentPageId == 3) {
+        screen = (lv_obj_t **)screen3;
+    }
+
+    return screen[index];
+}
+
 extern "C" void flowInit() {
     eez::initAssetsMemory();
     eez::loadMainAssets(eez::assets, sizeof(eez::assets));
@@ -55,6 +73,7 @@ extern "C" void flowInit() {
     eez::initAllocHeap(eez::ALLOC_BUFFER, eez::ALLOC_BUFFER_SIZE);
 
     eez::flow::replacePageHook = replacePageHook;
+    eez::flow::getLvglObjectFromIndexHook = getLvglObjectFromIndex;
 
     eez::flow::start(eez::g_mainAssets);
 

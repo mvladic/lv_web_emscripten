@@ -4,6 +4,13 @@
 #include "actions.h"
 #include "../flow.h"
 
+static void event_handler_cb_screen_1_print_label_header(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    if (event == LV_EVENT_CLICKED) {
+        flowPropagateValue(0, 2, 1);
+    }
+}
+
 static void event_handler_cb_screen_1_print_btn_menu_move_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     if (event == LV_EVENT_CLICKED) {
@@ -97,6 +104,8 @@ screen_1_print *create_screen_1_print() {
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_recolor(obj, true);
                     lv_label_set_text(obj, "The #ffffff squareline.gcode# word file is being printed");
+                    lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_label_header, LV_EVENT_ALL, screen);
+                    lv_obj_add_flag(obj, LV_OBJ_FLAG_CLICKABLE);
                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_text_color(obj, lv_color_hex(0xff9098aa), LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
