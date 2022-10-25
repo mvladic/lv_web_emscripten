@@ -62,8 +62,8 @@ static void event_handler_cb_screen_3_setting_btn_menu_move_s1(lv_event_t *e) {
     }
 }
 
-screen_1_print *create_screen_1_print() {
-    screen_1_print *screen = (screen_1_print *)lv_mem_alloc(sizeof(screen_1_print));
+screen_1_print_t *create_screen_screen_1_print() {
+    screen_1_print_t *screen = (screen_1_print_t *)lv_mem_alloc(sizeof(screen_1_print_t));
     lv_obj_t *obj = lv_obj_create(0);
     screen->screen_obj = obj;
     lv_obj_set_pos(obj, 0, 0);
@@ -71,7 +71,7 @@ screen_1_print *create_screen_1_print() {
     {
         lv_obj_t *parent_obj = obj;
         {
-            // Background
+            // background
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_background = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -81,7 +81,7 @@ screen_1_print *create_screen_1_print() {
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
         }
         {
-            // Panel Header
+            // panel_header
             lv_obj_t *obj = lv_obj_create(parent_obj);
             screen->obj_panel_header = obj;
             lv_obj_set_pos(obj, -30, 0);
@@ -97,7 +97,7 @@ screen_1_print *create_screen_1_print() {
             {
                 lv_obj_t *parent_obj = obj;
                 {
-                    // Label Header
+                    // label_header
                     lv_obj_t *obj = lv_label_create(parent_obj);
                     screen->obj_label_header = obj;
                     lv_obj_set_pos(obj, 0, 0);
@@ -111,7 +111,7 @@ screen_1_print *create_screen_1_print() {
                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
                 }
                 {
-                    // IMG Wifi
+                    // img_wifi
                     lv_obj_t *obj = lv_img_create(parent_obj);
                     screen->obj_img_wifi = obj;
                     lv_obj_set_pos(obj, 0, 0);
@@ -122,7 +122,7 @@ screen_1_print *create_screen_1_print() {
                     lv_obj_set_style_align(obj, LV_ALIGN_RIGHT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                 }
                 {
-                    // IMG PC
+                    // img_pc
                     lv_obj_t *obj = lv_img_create(parent_obj);
                     screen->obj_img_pc = obj;
                     lv_obj_set_pos(obj, -42, 0);
@@ -133,7 +133,7 @@ screen_1_print *create_screen_1_print() {
                     lv_obj_set_style_align(obj, LV_ALIGN_RIGHT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                 }
                 {
-                    // IMG USB
+                    // img_usb
                     lv_obj_t *obj = lv_img_create(parent_obj);
                     screen->obj_img_usb = obj;
                     lv_obj_set_pos(obj, -84, 0);
@@ -146,7 +146,7 @@ screen_1_print *create_screen_1_print() {
             }
         }
         {
-            // BTN Menu Print S1
+            // btn_menu_print_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_print_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -157,7 +157,7 @@ screen_1_print *create_screen_1_print() {
             lv_obj_set_style_align(obj, LV_ALIGN_TOP_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // BTN Menu Move S1
+            // btn_menu_move_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_move_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -170,7 +170,7 @@ screen_1_print *create_screen_1_print() {
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // BTN Menu Setting S1
+            // btn_menu_setting_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_setting_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -183,7 +183,7 @@ screen_1_print *create_screen_1_print() {
             lv_obj_set_style_align(obj, LV_ALIGN_BOTTOM_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // S1 Content Panel
+            // s1_content_panel
             lv_obj_t *obj = lv_obj_create(parent_obj);
             screen->obj_s1_content_panel = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -200,10 +200,10 @@ screen_1_print *create_screen_1_print() {
             {
                 lv_obj_t *parent_obj = obj;
                 {
-                    // Slider Print View
+                    // slider_print_view
                     lv_obj_t *obj = lv_slider_create(parent_obj);
                     screen->obj_slider_print_view = obj;
-                    lv_obj_set_pos(obj, 0, -10);
+                    lv_obj_set_pos(obj, -1, -10);
                     lv_obj_set_size(obj, 332, 396);
                     lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_slider_print_view, LV_EVENT_ALL, screen);
                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -221,7 +221,7 @@ screen_1_print *create_screen_1_print() {
                     {
                         lv_obj_t *parent_obj = obj;
                         {
-                            // Number Print
+                            // number_print
                             lv_obj_t *obj = lv_label_create(parent_obj);
                             screen->obj_number_print = obj;
                             lv_obj_set_pos(obj, 0, -40);
@@ -236,7 +236,7 @@ screen_1_print *create_screen_1_print() {
                     }
                 }
                 {
-                    // Display Time S1
+                    // display_time_s1
                     lv_obj_t *obj = lv_obj_create(parent_obj);
                     screen->obj_display_time_s1 = obj;
                     lv_obj_set_pos(obj, -26, 30);
@@ -262,7 +262,7 @@ screen_1_print *create_screen_1_print() {
                     {
                         lv_obj_t *parent_obj = obj;
                         {
-                            // DT1
+                            // dt1
                             lv_obj_t *obj = lv_obj_create(parent_obj);
                             screen->obj_dt1 = obj;
                             lv_obj_set_pos(obj, 0, 0);
@@ -279,7 +279,7 @@ screen_1_print *create_screen_1_print() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // Label Printing Time 1
+                                    // label_printing_time_1
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_printing_time_1 = obj;
                                     lv_obj_set_pos(obj, 0, 0);
@@ -290,7 +290,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // IMG Tine 1
+                                    // img_tine_1
                                     lv_obj_t *obj = lv_img_create(parent_obj);
                                     screen->obj_img_tine_1 = obj;
                                     lv_obj_set_pos(obj, 20, 10);
@@ -301,7 +301,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // Label Time 1
+                                    // label_time_1
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_time_1 = obj;
                                     lv_obj_set_pos(obj, 60, 10);
@@ -314,7 +314,7 @@ screen_1_print *create_screen_1_print() {
                             }
                         }
                         {
-                            // Panel3
+                            // panel3
                             lv_obj_t *obj = lv_obj_create(parent_obj);
                             screen->obj_panel3 = obj;
                             lv_obj_set_pos(obj, 0, 0);
@@ -325,7 +325,7 @@ screen_1_print *create_screen_1_print() {
                             lv_obj_set_style_border_width(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
                         }
                         {
-                            // DT2
+                            // dt2
                             lv_obj_t *obj = lv_obj_create(parent_obj);
                             screen->obj_dt2 = obj;
                             lv_obj_set_pos(obj, 0, 0);
@@ -342,7 +342,7 @@ screen_1_print *create_screen_1_print() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // Label Printing Time 2
+                                    // label_printing_time_2
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_printing_time_2 = obj;
                                     lv_obj_set_pos(obj, 0, 0);
@@ -354,7 +354,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // IMG Tine 2
+                                    // img_tine_2
                                     lv_obj_t *obj = lv_img_create(parent_obj);
                                     screen->obj_img_tine_2 = obj;
                                     lv_obj_set_pos(obj, 20, 10);
@@ -365,7 +365,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // Label Time 2
+                                    // label_time_2
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_time_2 = obj;
                                     lv_obj_set_pos(obj, 60, 11);
@@ -380,7 +380,7 @@ screen_1_print *create_screen_1_print() {
                     }
                 }
                 {
-                    // Display Heat S1
+                    // display_heat_s1
                     lv_obj_t *obj = lv_obj_create(parent_obj);
                     screen->obj_display_heat_s1 = obj;
                     lv_obj_set_pos(obj, -26, 130);
@@ -406,7 +406,7 @@ screen_1_print *create_screen_1_print() {
                     {
                         lv_obj_t *parent_obj = obj;
                         {
-                            // DT3
+                            // dt3
                             lv_obj_t *obj = lv_obj_create(parent_obj);
                             screen->obj_dt3 = obj;
                             lv_obj_set_pos(obj, 0, 0);
@@ -423,7 +423,7 @@ screen_1_print *create_screen_1_print() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // Label Printing Head Temp
+                                    // label_printing_head_temp
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_printing_head_temp = obj;
                                     lv_obj_set_pos(obj, 0, 0);
@@ -435,7 +435,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // IMG Head
+                                    // img_head
                                     lv_obj_t *obj = lv_img_create(parent_obj);
                                     screen->obj_img_head = obj;
                                     lv_obj_set_pos(obj, 15, 10);
@@ -446,7 +446,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // Label Head Temp
+                                    // label_head_temp
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_head_temp = obj;
                                     lv_obj_set_pos(obj, 40, 10);
@@ -457,7 +457,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_26, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // Label Printing Head Temp2
+                                    // label_printing_head_temp2
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_printing_head_temp2 = obj;
                                     lv_obj_set_pos(obj, 95, 13);
@@ -470,7 +470,7 @@ screen_1_print *create_screen_1_print() {
                             }
                         }
                         {
-                            // Panel1
+                            // panel1
                             lv_obj_t *obj = lv_obj_create(parent_obj);
                             screen->obj_panel1 = obj;
                             lv_obj_set_pos(obj, 0, 0);
@@ -481,7 +481,7 @@ screen_1_print *create_screen_1_print() {
                             lv_obj_set_style_border_width(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
                         }
                         {
-                            // DT4
+                            // dt4
                             lv_obj_t *obj = lv_obj_create(parent_obj);
                             screen->obj_dt4 = obj;
                             lv_obj_set_pos(obj, 0, 0);
@@ -498,7 +498,7 @@ screen_1_print *create_screen_1_print() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // Label Printing Bed Temp
+                                    // label_printing_bed_temp
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_printing_bed_temp = obj;
                                     lv_obj_set_pos(obj, 0, 0);
@@ -510,7 +510,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // IMG Bad
+                                    // img_bad
                                     lv_obj_t *obj = lv_img_create(parent_obj);
                                     screen->obj_img_bad = obj;
                                     lv_obj_set_pos(obj, 20, 10);
@@ -521,7 +521,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // Label Time 3
+                                    // label_time_3
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_time_3 = obj;
                                     lv_obj_set_pos(obj, 55, 10);
@@ -532,7 +532,7 @@ screen_1_print *create_screen_1_print() {
                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_26, LV_PART_MAIN | LV_STATE_DEFAULT);
                                 }
                                 {
-                                    // Label Printing Bed Temp1
+                                    // label_printing_bed_temp1
                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                     screen->obj_label_printing_bed_temp1 = obj;
                                     lv_obj_set_pos(obj, 100, 13);
@@ -547,7 +547,7 @@ screen_1_print *create_screen_1_print() {
                     }
                 }
                 {
-                    // Panel Buttons S1
+                    // panel_buttons_s1
                     lv_obj_t *obj = lv_obj_create(parent_obj);
                     screen->obj_panel_buttons_s1 = obj;
                     lv_obj_set_pos(obj, 0, 0);
@@ -563,7 +563,7 @@ screen_1_print *create_screen_1_print() {
                     {
                         lv_obj_t *parent_obj = obj;
                         {
-                            // BTN Pause
+                            // btn_pause
                             lv_obj_t *obj = lv_img_create(parent_obj);
                             screen->obj_btn_pause = obj;
                             lv_obj_set_pos(obj, 10, 0);
@@ -575,7 +575,7 @@ screen_1_print *create_screen_1_print() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // BTN Pause Top
+                                    // btn_pause_top
                                     lv_obj_t *obj = lv_img_create(parent_obj);
                                     screen->obj_btn_pause_top = obj;
                                     lv_obj_set_pos(obj, 0, 0);
@@ -594,7 +594,7 @@ screen_1_print *create_screen_1_print() {
                                     {
                                         lv_obj_t *parent_obj = obj;
                                         {
-                                            // Image Pause
+                                            // image_pause
                                             lv_obj_t *obj = lv_img_create(parent_obj);
                                             screen->obj_image_pause = obj;
                                             lv_obj_set_pos(obj, 0, 0);
@@ -609,7 +609,7 @@ screen_1_print *create_screen_1_print() {
                             }
                         }
                         {
-                            // BTN Cancel
+                            // btn_cancel
                             lv_obj_t *obj = lv_img_create(parent_obj);
                             screen->obj_btn_cancel = obj;
                             lv_obj_set_pos(obj, -30, 0);
@@ -621,7 +621,7 @@ screen_1_print *create_screen_1_print() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // BTN Cancel Top
+                                    // btn_cancel_top
                                     lv_obj_t *obj = lv_img_create(parent_obj);
                                     screen->obj_btn_cancel_top = obj;
                                     lv_obj_set_pos(obj, 0, 0);
@@ -637,7 +637,7 @@ screen_1_print *create_screen_1_print() {
                                     {
                                         lv_obj_t *parent_obj = obj;
                                         {
-                                            // Image Cancel
+                                            // image_cancel
                                             lv_obj_t *obj = lv_img_create(parent_obj);
                                             screen->obj_image_cancel = obj;
                                             lv_obj_set_pos(obj, 0, 0);
@@ -659,7 +659,7 @@ screen_1_print *create_screen_1_print() {
     return screen;
 }
 
-void tick_screen_1_print(screen_1_print *screen) {
+void tick_screen_screen_1_print(screen_1_print_t *screen) {
     {
         int32_t value_new = evalIntegerProperty(0, 10, 2, "Failed to evaluate Value in Slider widget");
         int32_t value_cur = lv_slider_get_value(screen->obj_slider_print_view);
@@ -672,8 +672,8 @@ void tick_screen_1_print(screen_1_print *screen) {
     }
 }
 
-screen_2_move *create_screen_2_move() {
-    screen_2_move *screen = (screen_2_move *)lv_mem_alloc(sizeof(screen_2_move));
+screen_2_move_t *create_screen_screen_2_move() {
+    screen_2_move_t *screen = (screen_2_move_t *)lv_mem_alloc(sizeof(screen_2_move_t));
     lv_obj_t *obj = lv_obj_create(0);
     screen->screen_obj = obj;
     lv_obj_set_pos(obj, 0, 0);
@@ -681,7 +681,7 @@ screen_2_move *create_screen_2_move() {
     {
         lv_obj_t *parent_obj = obj;
         {
-            // Background
+            // background
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_background = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -691,7 +691,7 @@ screen_2_move *create_screen_2_move() {
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
         }
         {
-            // BTN Menu Print S1
+            // btn_menu_print_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_print_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -704,7 +704,7 @@ screen_2_move *create_screen_2_move() {
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // BTN Menu Move S1
+            // btn_menu_move_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_move_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -715,7 +715,7 @@ screen_2_move *create_screen_2_move() {
             lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // BTN Menu Setting S1
+            // btn_menu_setting_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_setting_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -731,11 +731,11 @@ screen_2_move *create_screen_2_move() {
     return screen;
 }
 
-void tick_screen_2_move(screen_2_move *screen) {
+void tick_screen_screen_2_move(screen_2_move_t *screen) {
 }
 
-screen_3_setting *create_screen_3_setting() {
-    screen_3_setting *screen = (screen_3_setting *)lv_mem_alloc(sizeof(screen_3_setting));
+screen_3_setting_t *create_screen_screen_3_setting() {
+    screen_3_setting_t *screen = (screen_3_setting_t *)lv_mem_alloc(sizeof(screen_3_setting_t));
     lv_obj_t *obj = lv_obj_create(0);
     screen->screen_obj = obj;
     lv_obj_set_pos(obj, 0, 0);
@@ -743,7 +743,7 @@ screen_3_setting *create_screen_3_setting() {
     {
         lv_obj_t *parent_obj = obj;
         {
-            // Background
+            // background
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_background = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -753,7 +753,7 @@ screen_3_setting *create_screen_3_setting() {
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
         }
         {
-            // BTN Menu Print S1
+            // btn_menu_print_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_print_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -766,7 +766,7 @@ screen_3_setting *create_screen_3_setting() {
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // BTN Menu Move S1
+            // btn_menu_move_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_move_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -779,7 +779,7 @@ screen_3_setting *create_screen_3_setting() {
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // BTN Menu Setting S1
+            // btn_menu_setting_s1
             lv_obj_t *obj = lv_img_create(parent_obj);
             screen->obj_btn_menu_setting_s1 = obj;
             lv_obj_set_pos(obj, 0, 0);
@@ -793,6 +793,39 @@ screen_3_setting *create_screen_3_setting() {
     return screen;
 }
 
-void tick_screen_3_setting(screen_3_setting *screen) {
+void tick_screen_screen_3_setting(screen_3_setting_t *screen) {
 }
 
+
+#include <assert.h>
+
+typedef screen_t (*create_screen_func_t)();
+
+create_screen_func_t create_screen_funcs[] = {
+    (create_screen_func_t)create_screen_screen_1_print,
+    (create_screen_func_t)create_screen_screen_2_move,
+    (create_screen_func_t)create_screen_screen_3_setting,
+};
+
+typedef void (*tick_screen_func_t)(screen_t);
+
+tick_screen_func_t tick_screen_funcs[] = {
+    (tick_screen_func_t)tick_screen_screen_1_print,
+    (tick_screen_func_t)tick_screen_screen_2_move,
+    (tick_screen_func_t)tick_screen_screen_3_setting,
+};
+
+screen_t screens[NUM_SCREENS];
+
+screen_t get_screen(int screen_index) {
+    assert(screen_index >= 0 && screen_index < NUM_SCREENS);
+    if (!screens[screen_index]) {
+        screens[screen_index] = create_screen_funcs[screen_index]();
+    }
+    return screens[screen_index];
+}
+
+void tick_screen(int screen_index) {
+    assert(screen_index >= 0 && screen_index < NUM_SCREENS);
+    tick_screen_funcs[screen_index](get_screen(screen_index));
+}

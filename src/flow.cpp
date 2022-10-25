@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <emscripten.h>
 
 #include <eez/core/os.h>
 #include <eez/core/action.h>
@@ -21,49 +20,19 @@ ActionExecFunc g_actionExecFunctions[] = {
 
 }
 
-static int16_t currentPageId = -1;
-static screen_1_print *screen1;
-static screen_2_move *screen2;
-static screen_3_setting *screen3;
+static int16_t currentScreen = -1;
 
 void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t delay) {
-    eez::flow::onPageChanged(currentPageId, pageId);
-    currentPageId = pageId;
-
-    if (pageId == 1) {
-        if (!screen1) {
-            screen1 = create_screen_1_print();
-        }
-        lv_scr_load_anim(screen1->screen_obj, (lv_scr_load_anim_t)animType, speed, delay, false);
-    } else if (pageId == 2) {
-        if (!screen2) {
-            screen2 = create_screen_2_move();
-        }
-        lv_scr_load_anim(screen2->screen_obj, (lv_scr_load_anim_t)animType, speed, delay, false);
-    } else if (pageId == 3) {
-        if (!screen3) {
-            screen3 = create_screen_3_setting();
-        }
-        lv_scr_load_anim(screen3->screen_obj, (lv_scr_load_anim_t)animType, speed, delay, false);
-    }
+    eez::flow::onPageChanged(currentScreen + 1, pageId);
+    currentScreen = pageId - 1;
+    lv_scr_load_anim(get_screen(currentScreen)[0], (lv_scr_load_anim_t)animType, speed, delay, false);
 }
 
 static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
     if (index == -1) {
         return 0;
     }
-
-    lv_obj_t **screen;
-
-    if (currentPageId == 1) {
-        screen = (lv_obj_t **)screen1;
-    } else if (currentPageId == 2) {
-        screen = (lv_obj_t **)screen2;
-    } else if (currentPageId == 3) {
-        screen = (lv_obj_t **)screen3;
-    }
-
-    return screen[index];
+    return get_screen(currentScreen)[index];
 }
 
 extern "C" void flowInit() {
@@ -82,14 +51,7 @@ extern "C" void flowInit() {
 
 extern "C" void flowTick() {
     eez::flow::tick();
-
-    if (currentPageId == 1) {
-        tick_screen_1_print(screen1);
-    } else if (currentPageId == 2) {
-        tick_screen_2_move(screen2);
-    } else if (currentPageId == 3) {
-        tick_screen_3_setting(screen3);
-    }
+    tick_screen(currentScreen);
 }
 
 extern "C" void flowOnPageLoaded(int pageIndex) {
@@ -138,7 +100,7 @@ extern "C" void assignIntegerProperty(unsigned pageIndex, unsigned componentInde
         return;
     }
 
-    eez::Value srcValue(value, eez::VALUE_TYPE_INT32);
+    eez::Value srcValue((int)value, eez::VALUE_TYPE_INT32);
 
     eez::flow::assignValue(flowState, componentIndex, dstValue, srcValue);
 }

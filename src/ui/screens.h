@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-typedef struct screen_1_print_t {
+typedef struct _screen_1_print_t {
     lv_obj_t *screen_obj;
     
     lv_obj_t *obj_background;
@@ -51,35 +51,47 @@ typedef struct screen_1_print_t {
     lv_obj_t *obj_btn_cancel;
     lv_obj_t *obj_btn_cancel_top;
     lv_obj_t *obj_image_cancel;
-} screen_1_print;
+} screen_1_print_t;
 
-screen_1_print *create_screen_1_print();
-void tick_screen_1_print(screen_1_print *screen);
+screen_1_print_t *create_screen_screen_1_print();
+void tick_screen_screen_1_print(screen_1_print_t *screen);
 
-typedef struct screen_2_move_t {
+typedef struct _screen_2_move_t {
     lv_obj_t *screen_obj;
     
     lv_obj_t *obj_background;
     lv_obj_t *obj_btn_menu_print_s1;
     lv_obj_t *obj_btn_menu_move_s1;
     lv_obj_t *obj_btn_menu_setting_s1;
-} screen_2_move;
+} screen_2_move_t;
 
-screen_2_move *create_screen_2_move();
-void tick_screen_2_move(screen_2_move *screen);
+screen_2_move_t *create_screen_screen_2_move();
+void tick_screen_screen_2_move(screen_2_move_t *screen);
 
-typedef struct screen_3_setting_t {
+typedef struct _screen_3_setting_t {
     lv_obj_t *screen_obj;
     
     lv_obj_t *obj_background;
     lv_obj_t *obj_btn_menu_print_s1;
     lv_obj_t *obj_btn_menu_move_s1;
     lv_obj_t *obj_btn_menu_setting_s1;
-} screen_3_setting;
+} screen_3_setting_t;
 
-screen_3_setting *create_screen_3_setting();
-void tick_screen_3_setting(screen_3_setting *screen);
+screen_3_setting_t *create_screen_screen_3_setting();
+void tick_screen_screen_3_setting(screen_3_setting_t *screen);
 
+
+typedef lv_obj_t **screen_t;
+
+enum {
+    SCREEN_SCREEN_1_PRINT,
+    SCREEN_SCREEN_2_MOVE,
+    SCREEN_SCREEN_3_SETTING,
+    NUM_SCREENS
+};
+
+screen_t get_screen(int screen_index);
+void tick_screen(int screen_index);
 
 
 #ifdef __cplusplus
