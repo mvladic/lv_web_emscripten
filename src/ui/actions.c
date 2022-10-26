@@ -1,12 +1,27 @@
+#include <lvgl/lvgl.h>
+
 #include "actions.h"
 #include "screens.h"
+#include "../flow.h"
+
+void action_show_screen1_print(lv_event_t * e) {
+    loadScreen(0);
+}
+
+void action_show_screen2_move(lv_event_t * e) {
+    loadScreen(1);
+}
+
+void action_show_screen3_setting(lv_event_t * e) {
+    loadScreen(2);
+}
 
 #define _UI_TEMPORARY_STRING_BUFFER_SIZE 32
 
 void action_slider_print_view_value_changed(lv_event_t * e) {
-    char buf[_UI_TEMPORARY_STRING_BUFFER_SIZE];
-    lv_snprintf(buf, sizeof(buf), "%s%d%s", "", (int)lv_slider_get_value(e->target), "%");
-    
-    screen_1_print_t *screen = (screen_1_print_t *)e->user_data;
-    lv_label_set_text(screen->obj_number_print, buf);
+    // char buf[_UI_TEMPORARY_STRING_BUFFER_SIZE];
+    // lv_snprintf(buf, sizeof(buf), "%d%%", (int)lv_slider_get_value(e->target));
+   
+    // screen_1_print_t *screen = (screen_1_print_t *)e->user_data;
+    // lv_label_set_text(screen->obj_number_print, buf);
 }

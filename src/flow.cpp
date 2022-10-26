@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <lvgl/lvgl.h>
 
+#if HAS_FLOW_SUPPORT
 #include <eez/core/os.h>
 #include <eez/core/action.h>
 
@@ -10,23 +12,14 @@
 #include <eez/flow/components.h>
 #include <eez/flow/flow_defs_v3.h>
 
-#include "ui/screens.h"
 #include "ui/flow_def.h"
-namespace eez {
 
-ActionExecFunc g_actionExecFunctions[] = {
-    0
-};
+static void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t delay);
+#endif
 
-}
+#include "ui/screens.h"
 
 static int16_t currentScreen = -1;
-
-void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t delay) {
-    eez::flow::onPageChanged(currentScreen + 1, pageId);
-    currentScreen = pageId - 1;
-    lv_scr_load_anim(get_screen(currentScreen)[0], (lv_scr_load_anim_t)animType, speed, delay, false);
-}
 
 static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
     if (index == -1) {
@@ -35,7 +28,14 @@ static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
     return get_screen(currentScreen)[index];
 }
 
+extern "C" void loadScreen(int index) {
+    currentScreen = index;
+    lv_obj_t *screen = getLvglObjectFromIndex(0);
+    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
+}
+
 extern "C" void flowInit() {
+#if HAS_FLOW_SUPPORT
     eez::initAssetsMemory();
     eez::loadMainAssets(eez::assets, sizeof(eez::assets));
     eez::initOtherMemory();
@@ -47,11 +47,28 @@ extern "C" void flowInit() {
     eez::flow::start(eez::g_mainAssets);
 
     replacePageHook(1, 0, 0, 0);
+#else
+    loadScreen(0);
+#endif
 }
 
 extern "C" void flowTick() {
+#if HAS_FLOW_SUPPORT
     eez::flow::tick();
+#endif
     tick_screen(currentScreen);
+}
+
+#if HAS_FLOW_SUPPORT
+
+namespace eez {
+ActionExecFunc g_actionExecFunctions[] = { 0 };
+}
+
+void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t delay) {
+    eez::flow::onPageChanged(currentScreen + 1, pageId);
+    currentScreen = pageId - 1;
+    lv_scr_load_anim(get_screen(currentScreen)[0], (lv_scr_load_anim_t)animType, speed, delay, false);
 }
 
 extern "C" void flowOnPageLoaded(int pageIndex) {
@@ -104,3 +121,4 @@ extern "C" void assignIntegerProperty(unsigned pageIndex, unsigned componentInde
 
     eez::flow::assignValue(flowState, componentIndex, dstValue, srcValue);
 }
+#endif
