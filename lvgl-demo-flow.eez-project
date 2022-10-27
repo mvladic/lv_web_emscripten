@@ -1912,10 +1912,10 @@
           "customOutputs": [],
           "description": "",
           "action": "CHANGE_SCREEN",
-          "screen": "Screen 2 Move",
-          "fadeMode": "FADE_IN",
-          "speed": 200,
-          "delay": 0,
+          "changeScreenTarget": "Screen 2 Move",
+          "changeScreenFadeMode": "FADE_IN",
+          "changeScreenSpeed": 200,
+          "changeScreenDelay": 0,
           "animItems": []
         },
         {
@@ -1929,10 +1929,10 @@
           "customOutputs": [],
           "description": "",
           "action": "CHANGE_SCREEN",
-          "screen": "Screen 3 Setting",
-          "fadeMode": "FADE_IN",
-          "speed": 200,
-          "delay": 0,
+          "changeScreenTarget": "Screen 3 Setting",
+          "changeScreenFadeMode": "FADE_IN",
+          "changeScreenSpeed": 200,
+          "changeScreenDelay": 0,
           "animItems": []
         },
         {
@@ -1945,9 +1945,6 @@
           "customInputs": [],
           "customOutputs": [],
           "action": "PLAY_ANIMATION",
-          "fadeMode": "FADE_ON",
-          "speed": 200,
-          "delay": 0,
           "animTarget": "Label Header",
           "animDelay": 0,
           "animItems": [
@@ -2211,10 +2208,10 @@
           "customOutputs": [],
           "description": "",
           "action": "CHANGE_SCREEN",
-          "screen": "Screen 1 Print",
-          "fadeMode": "FADE_IN",
-          "speed": 200,
-          "delay": 0,
+          "changeScreenTarget": "Screen 1 Print",
+          "changeScreenFadeMode": "FADE_IN",
+          "changeScreenSpeed": 200,
+          "changeScreenDelay": 0,
           "animItems": []
         },
         {
@@ -2228,10 +2225,10 @@
           "customOutputs": [],
           "description": "",
           "action": "CHANGE_SCREEN",
-          "screen": "Screen 3 Setting",
-          "fadeMode": "FADE_IN",
-          "speed": 200,
-          "delay": 0,
+          "changeScreenTarget": "Screen 3 Setting",
+          "changeScreenFadeMode": "FADE_IN",
+          "changeScreenSpeed": 200,
+          "changeScreenDelay": 0,
           "animItems": []
         }
       ],
@@ -2448,10 +2445,10 @@
           "customOutputs": [],
           "description": "",
           "action": "CHANGE_SCREEN",
-          "screen": "Screen 1 Print",
-          "fadeMode": "FADE_IN",
-          "speed": 200,
-          "delay": 0,
+          "changeScreenTarget": "Screen 1 Print",
+          "changeScreenFadeMode": "FADE_IN",
+          "changeScreenSpeed": 200,
+          "changeScreenDelay": 0,
           "animItems": []
         },
         {
@@ -2465,10 +2462,10 @@
           "customOutputs": [],
           "description": "",
           "action": "CHANGE_SCREEN",
-          "screen": "Screen 2 Move",
-          "fadeMode": "FADE_IN",
-          "speed": 200,
-          "delay": 0,
+          "changeScreenTarget": "Screen 2 Move",
+          "changeScreenFadeMode": "FADE_IN",
+          "changeScreenSpeed": 200,
+          "changeScreenDelay": 0,
           "animItems": []
         }
       ],

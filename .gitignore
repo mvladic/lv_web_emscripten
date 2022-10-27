@@ -56,7 +56,9 @@ lvgl.js
 lvgl.wasm
 
 # CMake output
-build
+build/*
 .vscode
+
+!build/index.html
 
 *.eez-project-ui-state

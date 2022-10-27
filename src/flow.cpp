@@ -18,6 +18,7 @@ static void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, u
 #endif
 
 #include "ui/screens.h"
+#include "ui/images.h"
 
 static int16_t currentScreen = -1;
 
@@ -26,6 +27,16 @@ static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
         return 0;
     }
     return get_screen(currentScreen)[index];
+}
+
+static const void *getLvglImageByName(const char *name) {
+    printf("getLvglImageByName %s\n", name);
+    for (size_t imageIndex = 0; imageIndex < sizeof(images) / sizeof(ext_img_desc_t); imageIndex++) {
+        if (strcmp(images[imageIndex].name, name) == 0) {
+            return images[imageIndex].img_dsc;
+        }
+    }
+    return 0;
 }
 
 extern "C" void loadScreen(int index) {
@@ -43,6 +54,7 @@ extern "C" void flowInit() {
 
     eez::flow::replacePageHook = replacePageHook;
     eez::flow::getLvglObjectFromIndexHook = getLvglObjectFromIndex;
+    eez::flow::getLvglImageByNameHook = getLvglImageByName;
 
     eez::flow::start(eez::g_mainAssets);
 

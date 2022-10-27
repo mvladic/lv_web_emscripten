@@ -33,5 +33,12 @@ extern const lv_img_dsc_t img_print_view_bg;
 extern const lv_img_dsc_t img_print_view_front;
 extern const lv_img_dsc_t img_roller_bg;
 
+typedef struct _ext_img_desc_t {
+    const char *name;
+    const lv_img_dsc_t *img_dsc;
+} ext_img_desc_t;
+
+extern const ext_img_desc_t images[29];
+
 
 #endif /*EEZ_LVGL_UI_IMAGES_H*/
