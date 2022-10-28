@@ -581,7 +581,7 @@ screen_1_print_t *create_screen_screen_1_print() {
                                     lv_obj_set_pos(obj, 0, 0);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_img_set_src(obj, &img_btn_print_top_off);
-                                    lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE|LV_OBJ_FLAG_CHECKABLE);
+                                    lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CHECKABLE|LV_OBJ_FLAG_CLICKABLE);
                                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                                     lv_obj_set_style_radius(obj, 30, LV_PART_MAIN | LV_STATE_DEFAULT);
                                     lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -661,14 +661,14 @@ screen_1_print_t *create_screen_screen_1_print() {
 
 void tick_screen_screen_1_print(screen_1_print_t *screen) {
     {
-        int32_t value_new = evalIntegerProperty(0, 10, 2, "Failed to evaluate Value in Slider widget");
-        int32_t value_cur = lv_slider_get_value(screen->obj_slider_print_view);
-        if (value_new != value_cur) lv_slider_set_value(screen->obj_slider_print_view, value_new, LV_ANIM_OFF);
+        int32_t new_val = evalIntegerProperty(0, 10, 2, "Failed to evaluate Value in Slider widget");
+        int32_t cur_val = lv_slider_get_value(screen->obj_slider_print_view);
+        if (new_val != cur_val) lv_slider_set_value(screen->obj_slider_print_view, new_val, LV_ANIM_OFF);
     }
     {
-        const char *text_new = evalTextProperty(0, 11, 2, "Failed to evaluate Text in Label widget");
-        const char *text_cur = lv_label_get_text(screen->obj_number_print);
-        if (strcmp(text_new, text_cur) != 0) lv_label_set_text(screen->obj_number_print, text_new);
+        const char *new_val = evalTextProperty(0, 11, 2, "Failed to evaluate Text in Label widget");
+        const char *cur_val = lv_label_get_text(screen->obj_number_print);
+        if (strcmp(new_val, cur_val) != 0) lv_label_set_text(screen->obj_number_print, new_val);
     }
 }
 
