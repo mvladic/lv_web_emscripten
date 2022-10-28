@@ -105,6 +105,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
@@ -160,6 +162,8 @@
               "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "81f0beba-cc0d-4308-ccfa-3f53bdaa5174",
                 "definition": {
@@ -208,6 +212,8 @@
               "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "d947cd00-2979-4dbe-acc2-d675b48d8dd3",
                 "definition": {
@@ -249,6 +255,8 @@
               "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "a33f37cf-b911-4e1a-f787-86db005a16ad",
                 "definition": {
@@ -290,6 +298,8 @@
               "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "ca360f37-72b8-42d6-d1d9-dc01af57d414",
                 "definition": {
@@ -311,6 +321,8 @@
           "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "2dad7041-1fcd-4333-e1b2-bf181d0acb46",
             "definition": {
@@ -353,6 +365,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "243325fb-f806-4260-e0b5-007117e2f643",
             "definition": {
@@ -394,6 +408,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
             "definition": {
@@ -443,6 +459,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
             "definition": {
@@ -534,6 +552,8 @@
                   "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "8fcf18fe-d0e9-42e1-a77f-b58c3a1ea697",
                     "definition": {
@@ -563,6 +583,8 @@
               "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "45b529d6-e235-4ec5-e0d4-6b23ccfb9d88",
                 "definition": {
@@ -667,6 +689,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -708,6 +732,8 @@
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -749,6 +775,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -771,6 +799,8 @@
                   "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -818,6 +848,8 @@
                   "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "96922b67-52ba-49aa-841d-dfe39ecf23a5",
                     "definition": {
@@ -877,6 +909,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -919,6 +953,8 @@
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -960,6 +996,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -982,6 +1020,8 @@
                   "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -1009,6 +1049,8 @@
               "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "2c64f143-3322-488f-f52d-bef4b049f29c",
                 "definition": {
@@ -1107,6 +1149,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -1149,6 +1193,8 @@
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -1190,6 +1236,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1232,6 +1280,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1254,6 +1304,8 @@
                   "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -1301,6 +1353,8 @@
                   "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "96922b67-52ba-49aa-841d-dfe39ecf23a5",
                     "definition": {
@@ -1360,6 +1414,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -1402,6 +1458,8 @@
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -1443,6 +1501,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1485,6 +1545,8 @@
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "96c74f31-bd30-4de7-b78a-f37789e4c76a",
                         "definition": {
@@ -1507,6 +1569,8 @@
                   "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -1534,6 +1598,8 @@
               "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "2c64f143-3322-488f-f52d-bef4b049f29c",
                 "definition": {
@@ -1653,6 +1719,8 @@
                           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                           "scrollbarMode": "auto",
                           "scrollDirection": "all",
+                          "checkedStateType": "literal",
+                          "disabledStateType": "literal",
                           "localStyles": {
                             "objID": "0b680112-9661-46e4-fca7-4565e5376ba9",
                             "definition": {
@@ -1674,7 +1742,8 @@
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE|CHECKABLE",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
-                      "states": "",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "35b9d054-0477-4cd9-da75-a1b1ce199b9d",
                         "definition": {
@@ -1707,6 +1776,8 @@
                   "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "92be2b2e-d301-4fda-a58e-0c90241cbe7a",
                     "definition": {
@@ -1790,6 +1861,8 @@
                           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                           "scrollbarMode": "auto",
                           "scrollDirection": "all",
+                          "checkedStateType": "literal",
+                          "disabledStateType": "literal",
                           "localStyles": {
                             "objID": "0b680112-9661-46e4-fca7-4565e5376ba9",
                             "definition": {
@@ -1811,7 +1884,8 @@
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
-                      "states": "",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
                       "localStyles": {
                         "objID": "35b9d054-0477-4cd9-da75-a1b1ce199b9d",
                         "definition": {
@@ -1839,6 +1913,8 @@
                   "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
                   "localStyles": {
                     "objID": "92be2b2e-d301-4fda-a58e-0c90241cbe7a",
                     "definition": {
@@ -1860,6 +1936,8 @@
               "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
               "localStyles": {
                 "objID": "7a9713a5-64eb-4057-eb12-84d3675e29e7",
                 "definition": {
@@ -1882,6 +1960,8 @@
           "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "3c68e18c-c229-43b6-c3a6-174082c6cda6",
             "definition": {
@@ -1904,71 +1984,80 @@
         {
           "objID": "f0cd3e0b-3298-4c43-e641-1a6d0c13e86e",
           "type": "LVGLActionComponent",
-          "left": 145,
+          "left": 123,
           "top": -87,
-          "width": 268,
+          "width": 355,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
           "description": "",
-          "action": "CHANGE_SCREEN",
-          "changeScreenTarget": "Screen 2 Move",
-          "changeScreenFadeMode": "FADE_IN",
-          "changeScreenSpeed": 200,
-          "changeScreenDelay": 0,
-          "animItems": []
+          "actions": [
+            {
+              "objID": "62f519b1-c8ca-ecda-5000-b1b4db4b13f0",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 2 Move",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         },
         {
           "objID": "87883f04-40a0-428b-97ae-58943b6763b4",
           "type": "LVGLActionComponent",
           "left": 145,
           "top": 512,
-          "width": 287,
+          "width": 373,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
           "description": "",
-          "action": "CHANGE_SCREEN",
-          "changeScreenTarget": "Screen 3 Setting",
-          "changeScreenFadeMode": "FADE_IN",
-          "changeScreenSpeed": 200,
-          "changeScreenDelay": 0,
-          "animItems": []
+          "actions": [
+            {
+              "objID": "e57f4ba5-1055-a8df-657f-689b5c2d1cfe",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 3 Setting",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         },
         {
           "objID": "d8dec8e3-44d7-42a0-ec67-8cb0b00178f0",
           "type": "LVGLActionComponent",
           "left": 573,
           "top": -106,
-          "width": 490,
-          "height": 81,
+          "width": 810,
+          "height": 74,
           "customInputs": [],
           "customOutputs": [],
-          "action": "PLAY_ANIMATION",
-          "animTarget": "Label Header",
-          "animDelay": 0,
-          "animItems": [
+          "actions": [
             {
-              "objID": "dc99f1ee-4448-4815-df01-143426dd803e",
+              "objID": "20012c59-fb5f-da9f-4cf9-80a72dcad177",
+              "action": "PLAY_ANIMATION",
               "property": "POSITION_X",
               "start": 0,
               "end": 150,
-              "delay": 0,
               "time": 250,
               "relative": false,
               "instant": false,
-              "path": "LINEAR"
+              "path": "LINEAR",
+              "target": "Label Header",
+              "delay": 0
             },
             {
-              "objID": "4f137656-8f67-4f3f-c7d1-30b6d5263635",
+              "objID": "1ab72813-9f4c-edc6-d58a-6cb55aa99562",
+              "action": "PLAY_ANIMATION",
               "property": "POSITION_X",
               "start": 150,
               "end": 0,
-              "delay": 300,
               "time": 250,
               "relative": false,
               "instant": false,
-              "path": "LINEAR"
+              "path": "LINEAR",
+              "target": "Label Header",
+              "delay": 300
             }
           ]
         }
@@ -2048,6 +2137,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
@@ -2082,6 +2173,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "243325fb-f806-4260-e0b5-007117e2f643",
             "definition": {
@@ -2131,6 +2224,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
             "definition": {
@@ -2172,6 +2267,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
             "definition": {
@@ -2207,12 +2304,16 @@
           "customInputs": [],
           "customOutputs": [],
           "description": "",
-          "action": "CHANGE_SCREEN",
-          "changeScreenTarget": "Screen 1 Print",
-          "changeScreenFadeMode": "FADE_IN",
-          "changeScreenSpeed": 200,
-          "changeScreenDelay": 0,
-          "animItems": []
+          "actions": [
+            {
+              "objID": "a39e8f7c-3a5a-e694-cfc0-87d11d2efa8a",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 1 Print",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         },
         {
           "objID": "6fd06dbf-5bc2-4544-efea-79fec7ef213c",
@@ -2224,12 +2325,16 @@
           "customInputs": [],
           "customOutputs": [],
           "description": "",
-          "action": "CHANGE_SCREEN",
-          "changeScreenTarget": "Screen 3 Setting",
-          "changeScreenFadeMode": "FADE_IN",
-          "changeScreenSpeed": 200,
-          "changeScreenDelay": 0,
-          "animItems": []
+          "actions": [
+            {
+              "objID": "bf686d14-d2ce-6f8e-7c6c-126a11a16b41",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 3 Setting",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         }
       ],
       "connectionLines": [
@@ -2285,6 +2390,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
@@ -2319,6 +2426,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "243325fb-f806-4260-e0b5-007117e2f643",
             "definition": {
@@ -2368,6 +2477,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
             "definition": {
@@ -2417,6 +2528,8 @@
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
           "localStyles": {
             "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
             "definition": {
@@ -2444,12 +2557,16 @@
           "customInputs": [],
           "customOutputs": [],
           "description": "",
-          "action": "CHANGE_SCREEN",
-          "changeScreenTarget": "Screen 1 Print",
-          "changeScreenFadeMode": "FADE_IN",
-          "changeScreenSpeed": 200,
-          "changeScreenDelay": 0,
-          "animItems": []
+          "actions": [
+            {
+              "objID": "4e7d3e04-e769-c203-323c-e4d333e06358",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 1 Print",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         },
         {
           "objID": "56e47b3b-2259-4554-d74a-b9f613e80e96",
@@ -2461,12 +2578,16 @@
           "customInputs": [],
           "customOutputs": [],
           "description": "",
-          "action": "CHANGE_SCREEN",
-          "changeScreenTarget": "Screen 2 Move",
-          "changeScreenFadeMode": "FADE_IN",
-          "changeScreenSpeed": 200,
-          "changeScreenDelay": 0,
-          "animItems": []
+          "actions": [
+            {
+              "objID": "b945b0c2-aa82-dea8-c411-221063b73d6c",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 2 Move",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         }
       ],
       "connectionLines": [
