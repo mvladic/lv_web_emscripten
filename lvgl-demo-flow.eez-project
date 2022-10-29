@@ -103,10 +103,13 @@
           "heightUnit": "px",
           "children": [],
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
@@ -159,11 +162,15 @@
               "widthUnit": "content",
               "heightUnit": "content",
               "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "81f0beba-cc0d-4308-ccfa-3f53bdaa5174",
                 "definition": {
@@ -210,10 +217,13 @@
               "heightUnit": "content",
               "children": [],
               "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "d947cd00-2979-4dbe-acc2-d675b48d8dd3",
                 "definition": {
@@ -253,10 +263,13 @@
               "heightUnit": "content",
               "children": [],
               "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "a33f37cf-b911-4e1a-f787-86db005a16ad",
                 "definition": {
@@ -296,10 +309,13 @@
               "heightUnit": "content",
               "children": [],
               "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "ca360f37-72b8-42d6-d1d9-dc01af57d414",
                 "definition": {
@@ -318,11 +334,15 @@
               "angle": 0
             }
           ],
-          "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "2dad7041-1fcd-4333-e1b2-bf181d0acb46",
             "definition": {
@@ -363,10 +383,13 @@
           "heightUnit": "px",
           "children": [],
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "243325fb-f806-4260-e0b5-007117e2f643",
             "definition": {
@@ -405,11 +428,15 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
             "definition": {
@@ -456,11 +483,15 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
             "definition": {
@@ -550,10 +581,13 @@
                   "heightUnit": "content",
                   "children": [],
                   "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "8fcf18fe-d0e9-42e1-a77f-b58c3a1ea697",
                     "definition": {
@@ -580,11 +614,15 @@
                   "recolor": false
                 }
               ],
-              "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE",
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "45b529d6-e235-4ec5-e0d4-6b23ccfb9d88",
                 "definition": {
@@ -687,10 +725,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -730,10 +771,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -773,10 +817,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -796,11 +843,15 @@
                       "recolor": false
                     }
                   ],
-                  "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -845,11 +896,15 @@
                   "widthUnit": "px",
                   "heightUnit": "px",
                   "children": [],
-                  "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "96922b67-52ba-49aa-841d-dfe39ecf23a5",
                     "definition": {
@@ -907,10 +962,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -951,10 +1009,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -994,10 +1055,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1017,11 +1081,15 @@
                       "recolor": false
                     }
                   ],
-                  "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -1046,11 +1114,15 @@
                   "eventHandlers": []
                 }
               ],
-              "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "2c64f143-3322-488f-f52d-bef4b049f29c",
                 "definition": {
@@ -1147,10 +1219,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -1191,10 +1266,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -1234,10 +1312,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1278,10 +1359,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1301,11 +1385,15 @@
                       "recolor": false
                     }
                   ],
-                  "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -1350,11 +1438,15 @@
                   "widthUnit": "px",
                   "heightUnit": "px",
                   "children": [],
-                  "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "96922b67-52ba-49aa-841d-dfe39ecf23a5",
                     "definition": {
@@ -1412,10 +1504,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "0c4ded3d-d3ec-40cf-e1c7-0239a9692ea2",
                         "definition": {
@@ -1456,10 +1551,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "e8b6ebd1-8377-4e2b-9a34-5aae36b30fd9",
                         "definition": {
@@ -1499,10 +1597,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "514187c1-6c1a-425d-ca8c-419fba74170e",
                         "definition": {
@@ -1543,10 +1644,13 @@
                       "heightUnit": "content",
                       "children": [],
                       "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "96c74f31-bd30-4de7-b78a-f37789e4c76a",
                         "definition": {
@@ -1566,11 +1670,15 @@
                       "recolor": false
                     }
                   ],
-                  "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "ae256e15-2bf4-4085-edd2-92b781c59bab",
                     "definition": {
@@ -1595,11 +1703,15 @@
                   "eventHandlers": []
                 }
               ],
-              "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "2c64f143-3322-488f-f52d-bef4b049f29c",
                 "definition": {
@@ -1717,10 +1829,13 @@
                           "heightUnit": "content",
                           "children": [],
                           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                          "hiddenFlagType": "literal",
+                          "clickableFlagType": "literal",
                           "scrollbarMode": "auto",
                           "scrollDirection": "all",
                           "checkedStateType": "literal",
                           "disabledStateType": "literal",
+                          "states": "",
                           "localStyles": {
                             "objID": "0b680112-9661-46e4-fca7-4565e5376ba9",
                             "definition": {
@@ -1739,11 +1854,15 @@
                           "angle": 0
                         }
                       ],
-                      "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE|CHECKABLE",
+                      "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CHECKABLE",
+                      "hiddenFlagType": "literal",
+                      "clickableFlag": true,
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "35b9d054-0477-4cd9-da75-a1b1ce199b9d",
                         "definition": {
@@ -1774,10 +1893,13 @@
                     }
                   ],
                   "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "92be2b2e-d301-4fda-a58e-0c90241cbe7a",
                     "definition": {
@@ -1859,10 +1981,13 @@
                           "heightUnit": "content",
                           "children": [],
                           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                          "hiddenFlagType": "literal",
+                          "clickableFlagType": "literal",
                           "scrollbarMode": "auto",
                           "scrollDirection": "all",
                           "checkedStateType": "literal",
                           "disabledStateType": "literal",
+                          "states": "",
                           "localStyles": {
                             "objID": "0b680112-9661-46e4-fca7-4565e5376ba9",
                             "definition": {
@@ -1881,11 +2006,15 @@
                           "angle": 0
                         }
                       ],
-                      "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+                      "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                      "hiddenFlagType": "literal",
+                      "clickableFlag": true,
+                      "clickableFlagType": "literal",
                       "scrollbarMode": "auto",
                       "scrollDirection": "all",
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
+                      "states": "",
                       "localStyles": {
                         "objID": "35b9d054-0477-4cd9-da75-a1b1ce199b9d",
                         "definition": {
@@ -1911,10 +2040,13 @@
                     }
                   ],
                   "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
                   "scrollbarMode": "auto",
                   "scrollDirection": "all",
                   "checkedStateType": "literal",
                   "disabledStateType": "literal",
+                  "states": "",
                   "localStyles": {
                     "objID": "92be2b2e-d301-4fda-a58e-0c90241cbe7a",
                     "definition": {
@@ -1933,11 +2065,15 @@
                   "angle": 0
                 }
               ],
-              "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
               "scrollbarMode": "auto",
               "scrollDirection": "all",
               "checkedStateType": "literal",
               "disabledStateType": "literal",
+              "states": "",
               "localStyles": {
                 "objID": "7a9713a5-64eb-4057-eb12-84d3675e29e7",
                 "definition": {
@@ -1957,11 +2093,15 @@
               "eventHandlers": []
             }
           ],
-          "flags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "3c68e18c-c229-43b6-c3a6-174082c6cda6",
             "definition": {
@@ -1986,7 +2126,7 @@
           "type": "LVGLActionComponent",
           "left": 123,
           "top": -87,
-          "width": 355,
+          "width": 262,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -2007,7 +2147,7 @@
           "type": "LVGLActionComponent",
           "left": 145,
           "top": 512,
-          "width": 373,
+          "width": 281,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
@@ -2028,7 +2168,7 @@
           "type": "LVGLActionComponent",
           "left": 573,
           "top": -106,
-          "width": 810,
+          "width": 829,
           "height": 74,
           "customInputs": [],
           "customOutputs": [],
@@ -2135,10 +2275,13 @@
           "heightUnit": "px",
           "children": [],
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
@@ -2170,11 +2313,15 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "243325fb-f806-4260-e0b5-007117e2f643",
             "definition": {
@@ -2222,10 +2369,13 @@
           "heightUnit": "px",
           "children": [],
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
             "definition": {
@@ -2264,11 +2414,15 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
             "definition": {
@@ -2388,10 +2542,13 @@
           "heightUnit": "px",
           "children": [],
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "b5849e97-53c0-454c-b506-7ac500e87000"
           },
@@ -2423,11 +2580,15 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "243325fb-f806-4260-e0b5-007117e2f643",
             "definition": {
@@ -2474,11 +2635,15 @@
           "widthUnit": "px",
           "heightUnit": "px",
           "children": [],
-          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN|CLICKABLE",
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "533868c5-da00-48ad-e7ec-7ecc35734718",
             "definition": {
@@ -2526,10 +2691,13 @@
           "heightUnit": "px",
           "children": [],
           "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
           "scrollbarMode": "auto",
           "scrollDirection": "all",
           "checkedStateType": "literal",
           "disabledStateType": "literal",
+          "states": "",
           "localStyles": {
             "objID": "4d3a0348-995c-4ae0-ccf5-a115abdad7eb",
             "definition": {
