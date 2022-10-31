@@ -7,90 +7,73 @@
 extern "C" {
 #endif
 
-typedef struct _screen_1_print_t {
-    lv_obj_t *screen_obj;
-    
-    lv_obj_t *obj_background;
-    lv_obj_t *obj_panel_header;
-    lv_obj_t *obj_label_header;
-    lv_obj_t *obj_img_wifi;
-    lv_obj_t *obj_img_pc;
-    lv_obj_t *obj_img_usb;
-    lv_obj_t *obj_btn_menu_print_s1;
-    lv_obj_t *obj_btn_menu_move_s1;
-    lv_obj_t *obj_btn_menu_setting_s1;
-    lv_obj_t *obj_s1_content_panel;
-    lv_obj_t *obj_slider_print_view;
-    lv_obj_t *obj_number_print;
-    lv_obj_t *obj_display_time_s1;
-    lv_obj_t *obj_dt1;
-    lv_obj_t *obj_label_printing_time_1;
-    lv_obj_t *obj_img_tine_1;
-    lv_obj_t *obj_label_time_1;
-    lv_obj_t *obj_panel3;
-    lv_obj_t *obj_dt2;
-    lv_obj_t *obj_label_printing_time_2;
-    lv_obj_t *obj_img_tine_2;
-    lv_obj_t *obj_label_time_2;
-    lv_obj_t *obj_display_heat_s1;
-    lv_obj_t *obj_dt3;
-    lv_obj_t *obj_label_printing_head_temp;
-    lv_obj_t *obj_img_head;
-    lv_obj_t *obj_label_head_temp;
-    lv_obj_t *obj_label_printing_head_temp2;
-    lv_obj_t *obj_panel1;
-    lv_obj_t *obj_dt4;
-    lv_obj_t *obj_label_printing_bed_temp;
-    lv_obj_t *obj_img_bad;
-    lv_obj_t *obj_label_time_3;
-    lv_obj_t *obj_label_printing_bed_temp1;
-    lv_obj_t *obj_panel_buttons_s1;
-    lv_obj_t *obj_btn_pause;
-    lv_obj_t *obj_btn_pause_top;
-    lv_obj_t *obj_image_pause;
-    lv_obj_t *obj_btn_cancel;
-    lv_obj_t *obj_btn_cancel_top;
-    lv_obj_t *obj_image_cancel;
-} screen_1_print_t;
+typedef struct _objects_t {
+    lv_obj_t *screen_1_print;
+    lv_obj_t *screen_2_move;
+    lv_obj_t *screen_3_setting;
+    lv_obj_t *background_s1;
+    lv_obj_t *panel_header;
+    lv_obj_t *label_header;
+    lv_obj_t *img_wifi;
+    lv_obj_t *img_pc;
+    lv_obj_t *img_usb;
+    lv_obj_t *btn_menu_print_s1;
+    lv_obj_t *btn_menu_move_s1;
+    lv_obj_t *btn_menu_setting_s1;
+    lv_obj_t *s1_content_panel;
+    lv_obj_t *slider_print_view;
+    lv_obj_t *number_print;
+    lv_obj_t *display_time_s1;
+    lv_obj_t *dt1;
+    lv_obj_t *label_printing_time_1;
+    lv_obj_t *img_tine_1;
+    lv_obj_t *label_time_1;
+    lv_obj_t *panel3;
+    lv_obj_t *dt2;
+    lv_obj_t *label_printing_time_2;
+    lv_obj_t *img_tine_2;
+    lv_obj_t *label_time_2;
+    lv_obj_t *display_heat_s1;
+    lv_obj_t *dt3;
+    lv_obj_t *label_printing_head_temp;
+    lv_obj_t *img_head;
+    lv_obj_t *label_head_temp;
+    lv_obj_t *label_printing_head_temp2;
+    lv_obj_t *panel1;
+    lv_obj_t *dt4;
+    lv_obj_t *label_printing_bed_temp;
+    lv_obj_t *img_bad;
+    lv_obj_t *label_time_3;
+    lv_obj_t *label_printing_bed_temp1;
+    lv_obj_t *panel_buttons_s1;
+    lv_obj_t *btn_pause;
+    lv_obj_t *btn_pause_top;
+    lv_obj_t *image_pause;
+    lv_obj_t *btn_cancel;
+    lv_obj_t *btn_cancel_top;
+    lv_obj_t *image_cancel;
+    lv_obj_t *background_s2;
+    lv_obj_t *btn_menu_print_s2;
+    lv_obj_t *btn_menu_move_s2;
+    lv_obj_t *btn_menu_setting_s2;
+    lv_obj_t *background_s3;
+    lv_obj_t *btn_menu_print_s3;
+    lv_obj_t *btn_menu_move_s3;
+    lv_obj_t *btn_menu_setting_s3;
+} objects_t;
 
-screen_1_print_t *create_screen_screen_1_print();
-void tick_screen_screen_1_print(screen_1_print_t *screen);
+extern objects_t objects;
 
-typedef struct _screen_2_move_t {
-    lv_obj_t *screen_obj;
-    
-    lv_obj_t *obj_background;
-    lv_obj_t *obj_btn_menu_print_s1;
-    lv_obj_t *obj_btn_menu_move_s1;
-    lv_obj_t *obj_btn_menu_setting_s1;
-} screen_2_move_t;
+void create_screen_screen_1_print();
+void tick_screen_screen_1_print();
 
-screen_2_move_t *create_screen_screen_2_move();
-void tick_screen_screen_2_move(screen_2_move_t *screen);
+void create_screen_screen_2_move();
+void tick_screen_screen_2_move();
 
-typedef struct _screen_3_setting_t {
-    lv_obj_t *screen_obj;
-    
-    lv_obj_t *obj_background;
-    lv_obj_t *obj_btn_menu_print_s1;
-    lv_obj_t *obj_btn_menu_move_s1;
-    lv_obj_t *obj_btn_menu_setting_s1;
-} screen_3_setting_t;
+void create_screen_screen_3_setting();
+void tick_screen_screen_3_setting();
 
-screen_3_setting_t *create_screen_screen_3_setting();
-void tick_screen_screen_3_setting(screen_3_setting_t *screen);
-
-
-typedef lv_obj_t **screen_t;
-
-enum {
-    SCREEN_SCREEN_1_PRINT,
-    SCREEN_SCREEN_2_MOVE,
-    SCREEN_SCREEN_3_SETTING,
-    NUM_SCREENS
-};
-
-screen_t get_screen(int screen_index);
+void create_screens();
 void tick_screen(int screen_index);
 
 
