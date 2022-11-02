@@ -928,28 +928,6 @@
           "mode": "TEXT_UPPER"
         },
         {
-          "objID": "2380ebd7-532c-4eef-9264-81faeb5492b0",
-          "type": "LogActionComponent",
-          "left": 946,
-          "top": 180,
-          "width": 87,
-          "height": 55,
-          "customInputs": [],
-          "customOutputs": [],
-          "value": "\"defocused\""
-        },
-        {
-          "objID": "97f7795a-a51f-44ea-9986-05ee8726d129",
-          "type": "LogActionComponent",
-          "left": 946,
-          "top": 32,
-          "width": 87,
-          "height": 55,
-          "customInputs": [],
-          "customOutputs": [],
-          "value": "\"focused\""
-        },
-        {
           "objID": "43ca84b6-58f3-4cee-ced0-c1df53df52bf",
           "type": "LVGLButtonWidget",
           "left": 623,
