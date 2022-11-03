@@ -125,10 +125,10 @@
         {
           "objID": "f0cc81d0-aa9e-4265-f73a-9088ba5df4a3",
           "type": "LVGLLabelWidget",
-          "left": 706,
-          "top": 14,
-          "width": 78,
-          "height": 16,
+          "left": -10,
+          "top": 10,
+          "width": 263,
+          "height": 52,
           "customInputs": [],
           "customOutputs": [],
           "style": {
@@ -150,7 +150,15 @@
           "disabledStateType": "literal",
           "states": "",
           "localStyles": {
-            "objID": "ab39c4fb-f0e2-4aa8-b123-d58d74552769"
+            "objID": "ab39c4fb-f0e2-4aa8-b123-d58d74552769",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "text_font": "MONTSERRAT_48",
+                  "align": "TOP_RIGHT"
+                }
+              }
+            }
           },
           "eventHandlers": [],
           "text": "arc_value",
