@@ -1,7 +1,7 @@
 /*******************************************************************************
  * Size: 16 px
  * Bpp: 8
- * Opts: --user-data-dir=C:\Users\mvladic\AppData\Roaming\eezstudio --app-path=C:\work\eez\studio --no-sandbox --no-zygote --node-integration-in-worker --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --launch-time-ticks=588254026081 --mojo-platform-channel-handle=2608 --field-trial-handle=1724,i,4168022400266151318,16101126744026674184,131072 --disable-features=SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:1
+ * Opts: --user-data-dir=C:\Users\mvladic\AppData\Roaming\eezstudio --app-path=C:\work\eez\studio --no-sandbox --no-zygote --node-integration-in-worker --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --launch-time-ticks=603438865274 --mojo-platform-channel-handle=2652 --field-trial-handle=1660,i,250399146034419878,13385910465140107750,131072 --disable-features=SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:1
  ******************************************************************************/
 
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
