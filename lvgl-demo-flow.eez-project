@@ -2122,27 +2122,6 @@
           "eventHandlers": []
         },
         {
-          "objID": "f0cd3e0b-3298-4c43-e641-1a6d0c13e86e",
-          "type": "LVGLActionComponent",
-          "left": 123,
-          "top": -87,
-          "width": 262,
-          "height": 55,
-          "customInputs": [],
-          "customOutputs": [],
-          "description": "",
-          "actions": [
-            {
-              "objID": "62f519b1-c8ca-ecda-5000-b1b4db4b13f0",
-              "action": "CHANGE_SCREEN",
-              "screen": "Screen 2 Move",
-              "fadeMode": "FADE_IN",
-              "speed": 200,
-              "delay": 0
-            }
-          ]
-        },
-        {
           "objID": "87883f04-40a0-428b-97ae-58943b6763b4",
           "type": "LVGLActionComponent",
           "left": 145,
@@ -2200,16 +2179,30 @@
               "delay": 300
             }
           ]
+        },
+        {
+          "objID": "ac5f2272-f1a1-470a-c9fb-de1dd0cffb01",
+          "type": "LVGLActionComponent",
+          "left": 145,
+          "top": -87,
+          "width": 262,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "",
+          "actions": [
+            {
+              "objID": "62f519b1-c8ca-ecda-5000-b1b4db4b13f0",
+              "action": "CHANGE_SCREEN",
+              "screen": "Screen 2 Move",
+              "fadeMode": "FADE_IN",
+              "speed": 200,
+              "delay": 0
+            }
+          ]
         }
       ],
       "connectionLines": [
-        {
-          "objID": "3c090e1d-0595-4fea-f24b-541f029e25e4",
-          "source": "137bb72b-9220-4820-a734-80ce0e7f20dd",
-          "output": "CLICKED",
-          "target": "f0cd3e0b-3298-4c43-e641-1a6d0c13e86e",
-          "input": "@seqin"
-        },
         {
           "objID": "961a3ae5-54fc-4878-c3b4-5e80497c986e",
           "source": "36fc95b8-5d29-4840-8b88-bdebc3f91a2f",
@@ -2222,6 +2215,13 @@
           "source": "5a2d18a5-b1d3-403a-953c-62835bc3acc5",
           "output": "CLICKED",
           "target": "d8dec8e3-44d7-42a0-ec67-8cb0b00178f0",
+          "input": "@seqin"
+        },
+        {
+          "objID": "718328d6-41ff-44b0-cded-60d4c316e4ac",
+          "source": "137bb72b-9220-4820-a734-80ce0e7f20dd",
+          "output": "CLICKED",
+          "target": "ac5f2272-f1a1-470a-c9fb-de1dd0cffb01",
           "input": "@seqin"
         }
       ],
