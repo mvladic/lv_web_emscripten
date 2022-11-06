@@ -16,7 +16,7 @@ static void event_handler_cb_screen_1_print_label_header(lv_event_t *e) {
 static void event_handler_cb_screen_1_print_btn_menu_move_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(0, -1, 3);
+        flowPropagateValue(0, 7, 1);
     }
 }
 
