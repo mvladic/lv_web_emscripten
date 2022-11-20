@@ -69,6 +69,7 @@ void create_screen_screen_1_print() {
     objects.screen_1_print = obj;
     lv_obj_set_pos(obj, 0, 0);
     lv_obj_set_size(obj, 800, 480);
+    lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
     {
         lv_obj_t *parent_obj = obj;
         {
@@ -677,6 +678,7 @@ void create_screen_screen_2_move() {
     objects.screen_2_move = obj;
     lv_obj_set_pos(obj, 0, 0);
     lv_obj_set_size(obj, 800, 480);
+    lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
     {
         lv_obj_t *parent_obj = obj;
         {
@@ -737,6 +739,7 @@ void create_screen_screen_3_setting() {
     objects.screen_3_setting = obj;
     lv_obj_set_pos(obj, 0, 0);
     lv_obj_set_size(obj, 800, 480);
+    lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
     {
         lv_obj_t *parent_obj = obj;
         {

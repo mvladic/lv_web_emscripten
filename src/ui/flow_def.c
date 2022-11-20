@@ -99,6 +99,6 @@ const uint8_t assets[1433] = {
 
 native_var_t native_vars[] = {
     { NATIVE_VAR_TYPE_NONE, 0, 0 },
-    { NATIVE_VAR_TYPE_INTEGER, get_var_slider_value, set_var_slider_value }
+    { NATIVE_VAR_TYPE_INTEGER, get_var_slider_value, set_var_slider_value }, 
 };
 
