@@ -7,5 +7,5 @@
 	url = https://github.com/littlevgl/lv_drivers.git
 	branch = master
 [submodule "eez"]
-	path = eez
+	path = eez-framework
 	url = https://github.com/eez-open/eez-framework
