@@ -6,6 +6,7 @@
 #include "ui.h"
 
 objects_t objects;
+lv_obj_t *tick_value_change_obj;
 
 static void event_handler_cb_screen_1_print_label_header(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
@@ -33,7 +34,9 @@ static void event_handler_cb_screen_1_print_slider_print_view(lv_event_t *e) {
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         int32_t value = lv_slider_get_value(ta);
-        assignIntegerProperty(0, 10, 2, value, "Failed to assign Value in Slider widget");
+        if (tick_value_change_obj != ta) {
+            assignIntegerProperty(0, 10, 2, value, "Failed to assign Value in Slider widget");
+        }
     }
 }
 
@@ -665,12 +668,20 @@ void tick_screen_screen_1_print() {
     {
         int32_t new_val = evalIntegerProperty(0, 10, 2, "Failed to evaluate Value in Slider widget");
         int32_t cur_val = lv_slider_get_value(objects.slider_print_view);
-        if (new_val != cur_val) lv_slider_set_value(objects.slider_print_view, new_val, LV_ANIM_OFF);
+        if (new_val != cur_val) {
+            tick_value_change_obj = objects.slider_print_view;
+            lv_slider_set_value(objects.slider_print_view, new_val, LV_ANIM_OFF);
+            tick_value_change_obj = NULL;
+        }
     }
     {
         const char *new_val = evalTextProperty(0, 11, 2, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.number_print);
-        if (strcmp(new_val, cur_val) != 0) lv_label_set_text(objects.number_print, new_val);
+        if (strcmp(new_val, cur_val) != 0) {
+            tick_value_change_obj = objects.number_print;
+            lv_label_set_text(objects.number_print, new_val);
+            tick_value_change_obj = NULL;
+        }
     }
 }
 
