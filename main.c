@@ -91,6 +91,8 @@ int main(int argc, char ** argv)
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
 
+extern bool ledstate;
+
 void do_loop(void *arg)
 {
     /* Periodically call the lv_task handler.
@@ -115,6 +117,12 @@ void do_loop(void *arg)
 #endif
     }
 
+    static uint32_t time1;
+    uint32_t time2 = lv_tick_get();
+    if (time2 - time1 >= 1000) {
+        time1 = time2;
+        ledstate = !ledstate;
+    }
 }
 
 /**********************
