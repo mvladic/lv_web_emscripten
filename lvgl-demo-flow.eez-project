@@ -2189,7 +2189,7 @@
             {
               "objID": "20012c59-fb5f-da9f-4cf9-80a72dcad177",
               "action": "PLAY_ANIMATION",
-              "target": "Label Header",
+              "target": "label_header",
               "property": "POSITION_X",
               "start": 0,
               "end": 150,
@@ -2202,7 +2202,7 @@
             {
               "objID": "1ab72813-9f4c-edc6-d58a-6cb55aa99562",
               "action": "PLAY_ANIMATION",
-              "target": "Label Header",
+              "target": "label_header",
               "property": "POSITION_X",
               "start": 150,
               "end": 0,

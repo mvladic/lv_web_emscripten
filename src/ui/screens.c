@@ -10,65 +10,74 @@ lv_obj_t *tick_value_change_obj;
 
 static void event_handler_cb_screen_1_print_label_header(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(0, 2, 1);
+        flowPropagateValue(flowState, 2, 1);
     }
 }
 
 static void event_handler_cb_screen_1_print_btn_menu_move_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(0, 7, 1);
+        flowPropagateValue(flowState, 7, 1);
     }
 }
 
 static void event_handler_cb_screen_1_print_btn_menu_setting_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(0, 8, 1);
+        flowPropagateValue(flowState, 8, 1);
     }
 }
 
 static void event_handler_cb_screen_1_print_slider_print_view(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         int32_t value = lv_slider_get_value(ta);
         if (tick_value_change_obj != ta) {
-            assignIntegerProperty(0, 10, 2, value, "Failed to assign Value in Slider widget");
+            assignIntegerProperty(flowState, 10, 2, value, "Failed to assign Value in Slider widget");
         }
     }
 }
 
 static void event_handler_cb_screen_2_move_btn_menu_print_s2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(1, 0, 1);
+        flowPropagateValue(flowState, 0, 1);
     }
 }
 
 static void event_handler_cb_screen_2_move_btn_menu_setting_s2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(1, 3, 1);
+        flowPropagateValue(flowState, 3, 1);
     }
 }
 
 static void event_handler_cb_screen_3_setting_btn_menu_print_s3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(2, 0, 1);
+        flowPropagateValue(flowState, 0, 1);
     }
 }
 
 static void event_handler_cb_screen_3_setting_btn_menu_move_s3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(2, 2, 1);
+        flowPropagateValue(flowState, 2, 1);
     }
 }
 
 void create_screen_screen_1_print() {
+    void *flowState = getFlowState(0, 0);
     lv_obj_t *obj = lv_obj_create(0);
     objects.screen_1_print = obj;
     lv_obj_set_pos(obj, 0, 0);
@@ -110,7 +119,7 @@ void create_screen_screen_1_print() {
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_recolor(obj, true);
                     lv_label_set_text(obj, "The #ffffff squareline.gcode# word file is being printed");
-                    lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_label_header, LV_EVENT_ALL, 0);
+                    lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_label_header, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_CLICKABLE);
                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_text_color(obj, lv_color_hex(0xff9098aa), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -169,7 +178,7 @@ void create_screen_screen_1_print() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 162);
             lv_img_set_src(obj, &img_btn_move);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_btn_menu_move_s1, LV_EVENT_ALL, 0);
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_btn_menu_move_s1, LV_EVENT_ALL, flowState);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -182,7 +191,7 @@ void create_screen_screen_1_print() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 160);
             lv_img_set_src(obj, &img_btn_setting);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_btn_menu_setting_s1, LV_EVENT_ALL, 0);
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_btn_menu_setting_s1, LV_EVENT_ALL, flowState);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -211,7 +220,7 @@ void create_screen_screen_1_print() {
                     objects.slider_print_view = obj;
                     lv_obj_set_pos(obj, -1, -10);
                     lv_obj_set_size(obj, 332, 396);
-                    lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_slider_print_view, LV_EVENT_ALL, 0);
+                    lv_obj_add_event_cb(obj, event_handler_cb_screen_1_print_slider_print_view, LV_EVENT_ALL, flowState);
                     lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_img_src(obj, &img_print_view_bg, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -232,6 +241,7 @@ void create_screen_screen_1_print() {
                             objects.number_print = obj;
                             lv_obj_set_pos(obj, 0, -40);
                             lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                            lv_label_set_text(obj, "");
                             lv_obj_set_style_align(obj, LV_ALIGN_BOTTOM_MID, LV_PART_INDICATOR | LV_STATE_DEFAULT);
                             lv_obj_set_style_text_color(obj, lv_color_hex(0xff00d2ff), LV_PART_INDICATOR | LV_STATE_DEFAULT);
                             lv_obj_set_style_text_font(obj, &lv_font_montserrat_26, LV_PART_INDICATOR | LV_STATE_DEFAULT);
@@ -291,6 +301,7 @@ void create_screen_screen_1_print() {
                                     lv_obj_set_pos(obj, 0, 0);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_label_set_recolor(obj, true);
+                                    lv_label_set_text(obj, "");
                                     lv_obj_set_style_align(obj, LV_ALIGN_TOP_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
                                     lv_obj_set_style_text_color(obj, lv_color_hex(0xff9098aa), LV_PART_MAIN | LV_STATE_DEFAULT);
                                     lv_obj_set_style_text_font(obj, &ui_font_small_font, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -665,8 +676,9 @@ void create_screen_screen_1_print() {
 }
 
 void tick_screen_screen_1_print() {
+    void *flowState = getFlowState(0, 0);
     {
-        int32_t new_val = evalIntegerProperty(0, 10, 2, "Failed to evaluate Value in Slider widget");
+        int32_t new_val = evalIntegerProperty(flowState, 10, 2, "Failed to evaluate Value in Slider widget");
         int32_t cur_val = lv_slider_get_value(objects.slider_print_view);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.slider_print_view;
@@ -675,7 +687,7 @@ void tick_screen_screen_1_print() {
         }
     }
     {
-        const char *new_val = evalTextProperty(0, 11, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 11, 2, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.number_print);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.number_print;
@@ -686,6 +698,7 @@ void tick_screen_screen_1_print() {
 }
 
 void create_screen_screen_2_move() {
+    void *flowState = getFlowState(0, 1);
     lv_obj_t *obj = lv_obj_create(0);
     objects.screen_2_move = obj;
     lv_obj_set_pos(obj, 0, 0);
@@ -710,7 +723,7 @@ void create_screen_screen_2_move() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 160);
             lv_img_set_src(obj, &img_btn_print);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_move_btn_menu_print_s2, LV_EVENT_ALL, 0);
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_move_btn_menu_print_s2, LV_EVENT_ALL, flowState);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_align(obj, LV_ALIGN_TOP_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -734,7 +747,7 @@ void create_screen_screen_2_move() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 160);
             lv_img_set_src(obj, &img_btn_setting);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_move_btn_menu_setting_s2, LV_EVENT_ALL, 0);
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_move_btn_menu_setting_s2, LV_EVENT_ALL, flowState);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_opa(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -744,9 +757,11 @@ void create_screen_screen_2_move() {
 }
 
 void tick_screen_screen_2_move() {
+    void *flowState = getFlowState(0, 1);
 }
 
 void create_screen_screen_3_setting() {
+    void *flowState = getFlowState(0, 2);
     lv_obj_t *obj = lv_obj_create(0);
     objects.screen_3_setting = obj;
     lv_obj_set_pos(obj, 0, 0);
@@ -771,7 +786,7 @@ void create_screen_screen_3_setting() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 160);
             lv_img_set_src(obj, &img_btn_print);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_3_setting_btn_menu_print_s3, LV_EVENT_ALL, 0);
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_3_setting_btn_menu_print_s3, LV_EVENT_ALL, flowState);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_align(obj, LV_ALIGN_TOP_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -784,7 +799,7 @@ void create_screen_screen_3_setting() {
             lv_obj_set_pos(obj, 0, 0);
             lv_obj_set_size(obj, 79, 162);
             lv_img_set_src(obj, &img_btn_move);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_3_setting_btn_menu_move_s3, LV_EVENT_ALL, 0);
+            lv_obj_add_event_cb(obj, event_handler_cb_screen_3_setting_btn_menu_move_s3, LV_EVENT_ALL, flowState);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
             lv_obj_set_style_align(obj, LV_ALIGN_LEFT_MID, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -805,6 +820,7 @@ void create_screen_screen_3_setting() {
 }
 
 void tick_screen_screen_3_setting() {
+    void *flowState = getFlowState(0, 2);
 }
 
 
