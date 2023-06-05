@@ -1,0 +1,500 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "lvglStyles": {
+    "objID": "a31bd004-35c5-b3fb-5c8b-78ea5c7693b8",
+    "styles": [],
+    "defaultStyles": {}
+  },
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "lvgl",
+      "imports": [],
+      "flowSupport": true,
+      "displayWidth": 800,
+      "displayHeight": 480
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [
+        {
+          "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
+          "fileName": "screens.h",
+          "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n//${eez-studio LVGL_SCREENS_DECL_EXT}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
+        },
+        {
+          "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
+          "fileName": "screens.c",
+          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"styles.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
+        },
+        {
+          "objID": "19d3d573-88a3-4550-f4da-753b61d7f0c4",
+          "fileName": "actions.h",
+          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
+        },
+        {
+          "objID": "ddb840d3-2cd4-4c24-897d-1e367e2df75f",
+          "fileName": "vars.h",
+          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n//${eez-studio FLOW_GLOBAL_VARIABLES_ENUM}\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
+        },
+        {
+          "objID": "9c770003-b028-4a8b-9447-fea072e67b3a",
+          "fileName": "flow_def.h",
+          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
+        },
+        {
+          "objID": "0f3ea37c-f0d3-4061-c693-76b52bd9d632",
+          "fileName": "flow_def.c",
+          "template": "#include <eez/core/vars.h>\n\n#include \"flow_def.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n"
+        },
+        {
+          "objID": "81fa9cb7-33e4-4272-9340-49a50037b327",
+          "fileName": "images.h",
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+        },
+        {
+          "objID": "5844b3a8-54b7-4bdf-ff04-d052e689328c",
+          "fileName": "images.c",
+          "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
+        },
+        {
+          "objID": "bad0addd-10de-48f7-e57e-b40fce3e7c45",
+          "fileName": "fonts.h",
+          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+        },
+        {
+          "objID": "605027e4-beef-4847-ab09-e1d6a4d47496",
+          "fileName": "styles.h",
+          "template": "#ifndef EEZ_LVGL_UI_STYLES_H\r\n#define EEZ_LVGL_UI_STYLES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_STYLES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_STYLES_H*/"
+        },
+        {
+          "objID": "81ccb629-7e73-4128-a31a-c5131af1d13d",
+          "fileName": "styles.c",
+          "template": "#include \"styles.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n\n//${eez-studio LVGL_STYLES_DEF}\n"
+        },
+        {
+          "objID": "ed7d0205-b564-4fe8-da13-3510801d23f2",
+          "fileName": "ui.h",
+          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n#include <eez/flow/lvgl_api.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\nvoid ui_init();\nvoid ui_tick();\n\n#ifdef __cplusplus\n}\n#endif\n\n\n#endif // EEZ_LVGL_UI_GUI_H"
+        },
+        {
+          "objID": "292907a7-7032-4814-e210-405def21551e",
+          "fileName": "ui.c",
+          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
+        },
+        {
+          "objID": "b3d74b78-2b9a-4cbd-c3e1-9cb332fb0efe",
+          "fileName": "structs.h",
+          "template": "#include <eez/flow/flow.h>\n\nusing namespace eez;\n\n//${eez-studio FLOW_STRUCTS}\n\n//${eez-studio FLOW_STRUCT_VALUES}\n"
+        }
+      ],
+      "destinationFolder": "src\\ui",
+      "lvglInclude": "lvgl/lvgl.h"
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [
+      {
+        "objID": "59384d9c-15d2-4c33-9c27-e50ef1b4b8be",
+        "name": "cal",
+        "type": "array:struct:Calibration",
+        "defaultValue": "[\n  {\n    point: [\n      {adc: 0} \n    ],\n    string_field: \"Test 1\"\n  },\n  {\n    point: [\n      {adc: 0} \n    ],\n    string_field: \"Test 2\"\n  },\n]",
+        "persistent": false
+      }
+    ],
+    "structures": [
+      {
+        "objID": "30997552-3f2c-4e8b-c1f6-56c1ee0df389",
+        "name": "Calibration",
+        "fields": [
+          {
+            "objID": "3fe323e9-bf0f-40e9-c79d-a76111a2893d",
+            "name": "point",
+            "type": "array:struct:Point"
+          },
+          {
+            "objID": "f290ba3b-bc50-4a93-cfe4-82cf85302e34",
+            "name": "int_field",
+            "type": "integer"
+          },
+          {
+            "objID": "c6a7f339-43e3-4546-dcb0-1e96276a3e5b",
+            "name": "bool_field",
+            "type": "boolean"
+          },
+          {
+            "objID": "9243ebdd-3797-4460-ebb5-b38ae7c1534d",
+            "name": "string_field",
+            "type": "string"
+          },
+          {
+            "objID": "e57e2e25-71c9-4f16-90c8-a927cec1c131",
+            "name": "arr_int",
+            "type": "array:integer"
+          },
+          {
+            "objID": "4b1cb47e-b9dc-4f21-a775-a5c7550ea018",
+            "name": "arr_float",
+            "type": "array:float"
+          },
+          {
+            "objID": "4ea14f05-81b4-4617-db7d-7b6f0f38595f",
+            "name": "arr_double",
+            "type": "array:double"
+          },
+          {
+            "objID": "573fb290-e377-4d72-d8f3-c2570b8a887c",
+            "name": "arr_bool",
+            "type": "array:boolean"
+          },
+          {
+            "objID": "815fcfcd-7aa8-4bdd-db6e-333b5303346b",
+            "name": "arr_string",
+            "type": "array:string"
+          },
+          {
+            "objID": "8fd6b20f-ca82-4db0-e29a-f452768f797c",
+            "name": "arr_date",
+            "type": "array:date"
+          }
+        ]
+      },
+      {
+        "objID": "5af0b6ff-727c-42b7-80c8-5cc16cc08ced",
+        "name": "Point",
+        "fields": [
+          {
+            "objID": "b1523f5b-9974-4b63-fc37-fb52ca2ce0cd",
+            "name": "adc",
+            "type": "float"
+          },
+          {
+            "objID": "13ad9f50-d159-4748-b5ca-fbb885bace3a",
+            "name": "meas1",
+            "type": "float"
+          },
+          {
+            "objID": "5dd44618-e045-437a-f08d-00df051b0068",
+            "name": "meas2",
+            "type": "float"
+          }
+        ]
+      }
+    ],
+    "enums": []
+  },
+  "actions": [
+    {
+      "objID": "4b21b5f0-51e4-4925-f083-ffd1c6e48251",
+      "components": [
+        {
+          "objID": "fb8da51c-797a-4ed9-bab6-78f7743c5df3",
+          "type": "StartActionComponent",
+          "left": -327,
+          "top": -89,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "9580999c-344e-4f1a-ba7c-34fd579c47d9",
+          "type": "EndActionComponent",
+          "left": 184,
+          "top": -89,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "5ca8ca25-a025-4105-f85e-7396ae261863",
+          "source": "fb8da51c-797a-4ed9-bab6-78f7743c5df3",
+          "output": "@seqout",
+          "target": "9580999c-344e-4f1a-ba7c-34fd579c47d9",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "get_cal",
+      "implementationType": "native"
+    },
+    {
+      "objID": "001a82f9-2eb1-4559-ce68-ce8228f5c686",
+      "components": [
+        {
+          "objID": "39594ab9-42c9-4a54-b57b-eff32104fdf9",
+          "type": "StartActionComponent",
+          "left": -295,
+          "top": -24,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "b7d75202-16c5-4d5a-971d-5bf2bd34c710",
+          "type": "EndActionComponent",
+          "left": 175,
+          "top": -11,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "97f9ad35-ff6a-45b1-8d54-c7625e7ce2fe",
+          "source": "39594ab9-42c9-4a54-b57b-eff32104fdf9",
+          "output": "@seqout",
+          "target": "b7d75202-16c5-4d5a-971d-5bf2bd34c710",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "update_cal",
+      "implementationType": "native"
+    }
+  ],
+  "userPages": [
+    {
+      "objID": "4b40eba7-b31a-468a-b887-11dfd0b6637f",
+      "components": [
+        {
+          "objID": "6b272cb8-48b4-467f-c130-a1edc1f930b7",
+          "type": "LVGLLabelWidget",
+          "left": 356,
+          "top": 232,
+          "width": 89,
+          "height": 16,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "content",
+          "heightUnit": "content",
+          "children": [],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67"
+          },
+          "text": "Hello, world!",
+          "textType": "literal",
+          "longMode": "WRAP",
+          "recolor": false
+        },
+        {
+          "objID": "6875cda6-4766-4225-8de2-7939b1c6c94b",
+          "type": "StartActionComponent",
+          "left": 33,
+          "top": -214,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "6d3dfbf4-226a-4db8-c52f-fc739bfd94a3",
+          "type": "CallActionActionComponent",
+          "left": 172,
+          "top": -214,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "Get calibration data from C++ into the flow",
+          "action": "get_cal"
+        },
+        {
+          "objID": "520dbdf0-e28b-420f-c055-724403f8fd8c",
+          "type": "SetVariableActionComponent",
+          "left": 316,
+          "top": -257,
+          "width": 325,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "Change calibration data inside the flow",
+          "entries": [
+            {
+              "objID": "f0e3dcdd-ab1f-463d-f3e1-83b903d99cc6",
+              "variable": "cal[0].point[0].adc",
+              "value": "cal[0].point[0].adc + 1"
+            }
+          ]
+        },
+        {
+          "objID": "1c1b7f7f-b32b-4f14-d01d-4c1a5367021a",
+          "type": "CallActionActionComponent",
+          "left": 720,
+          "top": -214,
+          "width": 95,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "Send changed calibration data back to C++",
+          "action": "update_cal"
+        },
+        {
+          "objID": "fbfb7924-cdb6-40bf-908a-ef00630da027",
+          "type": "LVGLLabelWidget",
+          "left": 361,
+          "top": 79,
+          "width": 195,
+          "height": 16,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "36339902-a482-420e-b563-a4f0d4a8c0e8",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "content",
+          "heightUnit": "content",
+          "children": [],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "d5f674b9-8a3d-4171-8328-5fc469bc6f93"
+          },
+          "text": "cal ? cal[0].point[0].adc : 0",
+          "textType": "expression",
+          "longMode": "WRAP",
+          "recolor": false
+        },
+        {
+          "objID": "53ecf494-dace-4e74-a6a7-bff195ddf999",
+          "type": "LVGLLabelWidget",
+          "left": 361,
+          "top": 120,
+          "width": 187,
+          "height": 16,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "d649a617-7e6c-4e6a-a933-1121eb5a95f6",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "content",
+          "heightUnit": "content",
+          "children": [],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "9eecb4c9-08f6-436e-ef7c-4abf8c8a15f3"
+          },
+          "text": "cal ? cal[1].string_field : 0",
+          "textType": "expression",
+          "longMode": "WRAP",
+          "recolor": false
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "329a7a1c-19ae-4658-accd-a580cd7b954a",
+          "source": "6875cda6-4766-4225-8de2-7939b1c6c94b",
+          "output": "@seqout",
+          "target": "6d3dfbf4-226a-4db8-c52f-fc739bfd94a3",
+          "input": "@seqin"
+        },
+        {
+          "objID": "3b6db8b0-a951-4d8b-fcdb-6932eb3c1cf7",
+          "source": "6d3dfbf4-226a-4db8-c52f-fc739bfd94a3",
+          "output": "@seqout",
+          "target": "520dbdf0-e28b-420f-c055-724403f8fd8c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "3098c8fe-fd59-412f-c450-6c23d51e1f3e",
+          "source": "520dbdf0-e28b-420f-c055-724403f8fd8c",
+          "output": "@seqout",
+          "target": "1c1b7f7f-b32b-4f14-d01d-4c1a5367021a",
+          "input": "@seqin"
+        },
+        {
+          "objID": "8d59c456-d80c-4522-999d-58850ec39419",
+          "source": "1c1b7f7f-b32b-4f14-d01d-4c1a5367021a",
+          "output": "@seqout",
+          "target": "6d3dfbf4-226a-4db8-c52f-fc739bfd94a3",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "Main",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 480,
+      "lvglLocalStyles": {
+        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
+      }
+    }
+  ],
+  "userWidgets": [],
+  "fonts": [],
+  "bitmaps": [],
+  "colors": [
+    {
+      "objID": "a3333659-ca35-4e6c-e434-d9dd1aa3b7d8",
+      "name": "color"
+    },
+    {
+      "objID": "f111d279-a86c-40ff-8739-063e95629d7f",
+      "name": "background_color"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "728af2e4-0a31-4f5c-b5cf-8fbdc345e872",
+      "name": "default",
+      "colors": [
+        "#ffffff",
+        "#404040"
+      ]
+    }
+  ]
+}

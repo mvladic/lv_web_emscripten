@@ -25,3 +25,10 @@ bool ledstate;
 
 bool get_var_wd() { return ledstate; };
 void set_var_wd(bool value) {};
+
+#if 0
+MyEnum my_enum_var = MyEnum_Member2;
+
+extern MyEnum get_var_my_enum_var() { return my_enum_var; }
+extern void set_var_my_enum_var(MyEnum value) { my_enum_var = value; } 
+#endif

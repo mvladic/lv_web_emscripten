@@ -5,6 +5,7 @@
 #include "actions.h"
 
 ActionExecFunc actions[] = {
+    0
 };
 
 

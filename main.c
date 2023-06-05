@@ -21,6 +21,7 @@
 #include "examplelist.h"
 
 #include "src/ui/ui.h"
+#include "src/ui/screens.h"
 
 /*********************
  *      DEFINES

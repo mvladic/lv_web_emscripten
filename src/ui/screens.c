@@ -12,7 +12,7 @@ static void event_handler_cb_screen_1_print_label_header(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 2, 1);
+        flowPropagateValue(flowState, 2, 0);
     }
 }
 
@@ -20,7 +20,7 @@ static void event_handler_cb_screen_1_print_btn_menu_move_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 7, 1);
+        flowPropagateValue(flowState, 7, 0);
     }
 }
 
@@ -28,7 +28,7 @@ static void event_handler_cb_screen_1_print_btn_menu_setting_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 8, 1);
+        flowPropagateValue(flowState, 8, 0);
     }
 }
 
@@ -48,7 +48,7 @@ static void event_handler_cb_screen_2_move_btn_menu_print_s2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 0, 1);
+        flowPropagateValue(flowState, 0, 0);
     }
 }
 
@@ -56,7 +56,7 @@ static void event_handler_cb_screen_2_move_btn_menu_setting_s2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 3, 1);
+        flowPropagateValue(flowState, 3, 0);
     }
 }
 
@@ -64,7 +64,7 @@ static void event_handler_cb_screen_3_setting_btn_menu_print_s3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 0, 1);
+        flowPropagateValue(flowState, 0, 0);
     }
 }
 
@@ -72,7 +72,7 @@ static void event_handler_cb_screen_3_setting_btn_menu_move_s3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 2, 1);
+        flowPropagateValue(flowState, 2, 0);
     }
 }
 
@@ -844,4 +844,13 @@ tick_screen_func_t tick_screen_funcs[] = {
 
 void tick_screen(int screen_index) {
     tick_screen_funcs[screen_index]();
+}
+
+
+size_t get_num_screens() {
+    return sizeof(tick_screen_funcs) / sizeof(tick_screen_func_t);
+}
+
+lv_obj_t *get_screen_obj(size_t screen_index) {
+    return ((lv_obj_t **)(&objects))[screen_index];
 }
