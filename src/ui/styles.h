@@ -7,6 +7,11 @@
 extern "C" {
 #endif
 
+extern void apply_style_label_style_base(lv_obj_t *obj);
+extern void apply_style_label_style_1(lv_obj_t *obj);
+extern void apply_style_label_style_2(lv_obj_t *obj);
+extern void apply_style_penel_style_1(lv_obj_t *obj);
+extern void apply_style_penel_style_2(lv_obj_t *obj);
 
 
 #ifdef __cplusplus
