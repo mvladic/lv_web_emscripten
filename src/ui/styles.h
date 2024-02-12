@@ -7,7 +7,6 @@
 extern "C" {
 #endif
 
-extern void apply_style_screen_title(lv_obj_t *obj);
 
 
 #ifdef __cplusplus

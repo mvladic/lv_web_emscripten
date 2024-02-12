@@ -8,15 +8,13 @@
  *      INCLUDES
  *********************/
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 #define SDL_MAIN_HANDLED        /*To fix SDL's "undefined reference to WinMain" issue*/
 #include <SDL2/SDL.h>
 #include <emscripten.h>
 #include "lvgl/lvgl.h"
-#include "lv_drivers/display/monitor.h"
-#include "lv_drivers/indev/mouse.h"
-#include "lv_drivers/indev/mousewheel.h"
-#include "lv_drivers/indev/keyboard.h"
+#include "lv_drivers/sdl/sdl.h"
 
 #include "examplelist.h"
 
@@ -137,7 +135,7 @@ void do_loop(void *arg)
 static void hal_init(void)
 {
    /* Use the 'monitor' driver which creates window on PC's monitor to simulate a display*/
-    monitor_init();
+    sdl_init();
 
     /*Create a display buffer*/
     static lv_disp_draw_buf_t disp_buf1;
@@ -148,7 +146,7 @@ static void hal_init(void)
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init(&disp_drv);            /*Basic initialization*/
     disp_drv.draw_buf = &disp_buf1;
-    disp_drv.flush_cb = monitor_flush;    /*Used when `LV_VDB_SIZE != 0` in lv_conf.h (buffered drawing)*/
+    disp_drv.flush_cb = sdl_display_flush;    /*Used when `LV_VDB_SIZE != 0` in lv_conf.h (buffered drawing)*/
     disp_drv.hor_res = monitor_hor_res;
     disp_drv.ver_res = monitor_ver_res;
     disp1 = lv_disp_drv_register(&disp_drv);
@@ -158,27 +156,24 @@ static void hal_init(void)
 
     /* Add the mouse as input device
     * Use the 'mouse' driver which reads the PC's mouse*/
-    mouse_init();
     static lv_indev_drv_t indev_drv_1;
     lv_indev_drv_init(&indev_drv_1); /*Basic initialization*/
     indev_drv_1.type = LV_INDEV_TYPE_POINTER;
 
     /*This function will be called periodically (by the library) to get the mouse position and state*/
-    indev_drv_1.read_cb = mouse_read;
+    indev_drv_1.read_cb = sdl_mouse_read;
     lv_indev_t *mouse_indev = lv_indev_drv_register(&indev_drv_1);
 
-    keyboard_init();
     static lv_indev_drv_t indev_drv_2;
     lv_indev_drv_init(&indev_drv_2); /*Basic initialization*/
     indev_drv_2.type = LV_INDEV_TYPE_KEYPAD;
-    indev_drv_2.read_cb = keyboard_read;
+    indev_drv_2.read_cb = sdl_keyboard_read;
     lv_indev_t *kb_indev = lv_indev_drv_register(&indev_drv_2);
     //lv_indev_set_group(kb_indev, g);
-    mousewheel_init();
     static lv_indev_drv_t indev_drv_3;
     lv_indev_drv_init(&indev_drv_3); /*Basic initialization*/
     indev_drv_3.type = LV_INDEV_TYPE_ENCODER;
-    indev_drv_3.read_cb = mousewheel_read;
+    indev_drv_3.read_cb = sdl_mousewheel_read;
 
     lv_indev_t * enc_indev = lv_indev_drv_register(&indev_drv_3);
     //lv_indev_set_group(enc_indev, g);

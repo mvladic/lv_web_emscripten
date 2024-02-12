@@ -35,7 +35,7 @@ More info here: https://kripken.github.io/emscripten-site/docs/getting_started/d
 5. `cd build`
 6. `emcmake cmake ..`
 7. `emmake make -j4`
-5. A file called `index.html` will be generated. Run this in your browser.
+8. A file called `index.html` will be generated. Run this in your browser.
 
 ### Build options (environment variables)
 

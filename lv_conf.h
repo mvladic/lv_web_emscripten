@@ -609,6 +609,26 @@ typedef void * lv_user_data_t;
 # define LV_DEMO_MUSIC_AUTO_PLAY    0
 #endif
 
+#define USE_SDL 1
+//#define USE_SDL_GPU 1
+#if USE_SDL || USE_SDL_GPU
+#  define SDL_HOR_RES     800
+#  define SDL_VER_RES     480
+
+/* Scale window by this factor (useful when simulating small screens) */
+#  define SDL_ZOOM        1
+
+/* Used to test true double buffering with only address changing.
+ * Use 2 draw buffers, bith with SDL_HOR_RES x SDL_VER_RES size*/
+#  define SDL_DOUBLE_BUFFERED 0
+
+/*Eclipse: <SDL2/SDL.h>    Visual Studio: <SDL.h>*/
+#  define SDL_INCLUDE_PATH    <SDL2/SDL.h>
+
+/*Open two windows to test multi display support*/
+#  define SDL_DUAL_DISPLAY            0
+#endif
+
 /*--END OF LV_CONF_H--*/
 
 #endif /*LV_CONF_H*/

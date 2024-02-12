@@ -8,35 +8,77 @@ extern "C" {
 #endif
 
 typedef struct _objects_t {
-    lv_obj_t *main;
-    lv_obj_t *screen_a;
-    lv_obj_t *screen_b;
-    lv_obj_t *screen_c;
-    lv_obj_t *obj0;
-    lv_obj_t *obj1;
-    lv_obj_t *obj2;
-    lv_obj_t *obj3;
-    lv_obj_t *obj4;
-    lv_obj_t *obj5;
+    lv_obj_t *screen_1_print;
+    lv_obj_t *screen_2_move;
+    lv_obj_t *screen_3_setting;
+    lv_obj_t *background_s1;
+    lv_obj_t *background_s2;
+    lv_obj_t *background_s3;
+    lv_obj_t *bt_n_cancel;
+    lv_obj_t *bt_n_cancel_top;
+    lv_obj_t *bt_n_menu_move_s1;
+    lv_obj_t *bt_n_menu_move_s2;
+    lv_obj_t *bt_n_menu_move_s3;
+    lv_obj_t *bt_n_menu_print_s1;
+    lv_obj_t *bt_n_menu_print_s2;
+    lv_obj_t *bt_n_menu_print_s3;
+    lv_obj_t *bt_n_menu_setting_s1;
+    lv_obj_t *bt_n_menu_setting_s2;
+    lv_obj_t *bt_n_menu_setting_s3;
+    lv_obj_t *bt_n_pause;
+    lv_obj_t *bt_n_pause_top;
+    lv_obj_t *display_heat_s1;
+    lv_obj_t *display_time_s1;
+    lv_obj_t *dt1;
+    lv_obj_t *dt2;
+    lv_obj_t *dt3;
+    lv_obj_t *dt4;
+    lv_obj_t *im_g_bad;
+    lv_obj_t *im_g_head;
+    lv_obj_t *im_g_tine_1;
+    lv_obj_t *im_g_tine_2;
+    lv_obj_t *im_g_wifi;
+    lv_obj_t *image_cancel;
+    lv_obj_t *image_pause;
+    lv_obj_t *img_pc;
+    lv_obj_t *img_usb;
+    lv_obj_t *label_head_temp;
+    lv_obj_t *label_header;
+    lv_obj_t *label_printing_bed_temp;
+    lv_obj_t *label_printing_bed_temp1;
+    lv_obj_t *label_printing_head_temp;
+    lv_obj_t *label_printing_head_temp2;
+    lv_obj_t *label_printing_time_1;
+    lv_obj_t *label_printing_time_2;
+    lv_obj_t *label_time_1;
+    lv_obj_t *label_time_2;
+    lv_obj_t *label_time_3;
+    lv_obj_t *number_print;
+    lv_obj_t *panel_buttons_s1;
+    lv_obj_t *panel_header;
+    lv_obj_t *panel1;
+    lv_obj_t *panel3;
+    lv_obj_t *s1_content_panel;
+    lv_obj_t *slider_print_view;
 } objects_t;
 
 extern objects_t objects;
 
-void create_screen_main();
-void tick_screen_main();
+void create_screen_screen_1_print();
+void tick_screen_screen_1_print();
 
-void create_screen_screen_a();
-void tick_screen_screen_a();
+void create_screen_screen_2_move();
+void tick_screen_screen_2_move();
 
-void create_screen_screen_b();
-void tick_screen_screen_b();
-
-void create_screen_screen_c();
-void tick_screen_screen_c();
+void create_screen_screen_3_setting();
+void tick_screen_screen_3_setting();
 
 void create_screens();
 void tick_screen(int screen_index);
 
+
+extern size_t get_num_screens();
+extern lv_obj_t *get_screen_obj(size_t screen_index);
 
 #ifdef __cplusplus
 }

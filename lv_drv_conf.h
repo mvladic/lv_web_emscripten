@@ -84,7 +84,7 @@ extern int monitor_hor_res, monitor_ver_res;
 /*-------------------
  *  Monitor of PC
  *-------------------*/
-#define USE_MONITOR         1
+#define USE_MONITOR         0
 #if USE_MONITOR
 #define MONITOR_HOR_RES     monitor_hor_res
 #define MONITOR_VER_RES     monitor_ver_res
@@ -190,7 +190,7 @@ extern int monitor_hor_res, monitor_ver_res;
 /*---------------------------------------
  * Mouse or touchpad on PC (using SDL)
  *-------------------------------------*/
-#define USE_MOUSE       1
+#define USE_MOUSE       0
 #if USE_MOUSE
 /*No settings*/
 #endif
@@ -198,7 +198,7 @@ extern int monitor_hor_res, monitor_ver_res;
 /*-------------------------------------------
  * Mousewheel as encoder on PC (using SDL)
  *------------------------------------------*/
-#define USE_MOUSEWHEEL     1
+#define USE_MOUSEWHEEL     0
 #if USE_MOUSEWHEEL
 /*No settings*/
 #endif
@@ -219,7 +219,7 @@ extern int monitor_hor_res, monitor_ver_res;
 /*-------------------------------
  *   Keyboard of a PC (using SDL)
  *------------------------------*/
-#define USE_KEYBOARD    1
+#define USE_KEYBOARD    0
 #if USE_KEYBOARD
 /*No settings*/
 #endif
