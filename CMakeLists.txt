@@ -10,6 +10,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(lvgl)
 add_subdirectory(lv_drivers)
+
 file(GLOB MY_SOURCES "./*.c")
 set(SOURCES ${MY_SOURCES})
 
@@ -23,40 +24,25 @@ file(GLOB_RECURSE my_src
     ./src/*.c
 )
 list(APPEND SOURCES ${my_src})
-
-if (${HAS_FLOW_SUPPORT})
-    ################################################################################
-    # EEZ Framework
-    add_definitions(-DEEZ_FOR_LVGL)
-
-    include_directories(
-        ./eez-framework/src
-        ./eez-framework/src/eez/libs/agg
-        ./eez-framework/src/platform/simulator
-    )
-
-    file(GLOB_RECURSE src_eez
-        ./eez-framework/src/eez/*.cpp
-        ./eez-framework/src/eez/*.c
-    )
-
-    list(APPEND SOURCES ${src_eez})
-
-    ################################################################################
-endif(${HAS_FLOW_SUPPORT})
-
-add_executable(index ${SOURCES} ${INCLUDES})
-
-if(NOT LVGL_CHOSEN_DEMO)
-    set(LVGL_CHOSEN_DEMO lv_demo_widgets)
-endif()
-set_source_files_properties(main.c PROPERTIES COMPILE_FLAGS -DCHOSEN_DEMO=${LVGL_CHOSEN_DEMO})
+add_executable(index ${SOURCES})
 
 set(CMAKE_EXECUTABLE_SUFFIX ".html")
-target_link_libraries(index
-    lvgl
-    lvgl_examples
-    lvgl_demos
-    lv_drivers
-)
+
+if (${HAS_FLOW_SUPPORT})
+    add_definitions(-DEEZ_FOR_LVGL)
+
+    add_subdirectory(eez-framework)
+    
+    target_link_libraries(index
+        lvgl
+        lv_drivers
+        eez-framework
+   )
+else()
+    target_link_libraries(index
+        lvgl
+        lv_drivers
+    )
+endif(${HAS_FLOW_SUPPORT})
+
 set_target_properties(index PROPERTIES LINK_FLAGS "--shell-file ${PROJECT_SOURCE_DIR}/lvgl_shell.html -s SINGLE_FILE=1")
