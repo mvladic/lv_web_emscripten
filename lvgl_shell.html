@@ -36,16 +36,9 @@
 	<body>
 		<div id="git-hash"></div>
 		<p id="output">
-			<canvas id="canvas"></canvas>
+			<canvas id="canvas" width="1200" height="900"></canvas>
 		</p>
 		<script>
-			var siteURL = new URL(window.location.href);
-			var w = siteURL.searchParams.get("w") || "800";
-			var h = siteURL.searchParams.get("h") || "480";
-			var canvas = document.getElementById('canvas');
-			canvas.setAttribute("width", w);
-			canvas.setAttribute("height", h);
-			console.log("Requested " + w + "x" + h + " px");
 			var Module = {
 				print: function(text) {
 					console.log(text);
@@ -55,8 +48,7 @@
 				},
 				canvas: (function() {
 					return canvas;
-				})(),
-				arguments: [ siteURL.searchParams.get("w") || "800", siteURL.searchParams.get("h") || "480", siteURL.searchParams.get("example") ?? "default" ]
+				})()
 			};
             window.addEventListener("click", () => window.focus());
 		</script>

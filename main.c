@@ -8,18 +8,18 @@
  *      INCLUDES
  *********************/
 #include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
 #define SDL_MAIN_HANDLED        /*To fix SDL's "undefined reference to WinMain" issue*/
 #include <SDL2/SDL.h>
 #include <emscripten.h>
 #include "lvgl/lvgl.h"
+
+#if LVGL_VERSION_MAJOR < 9
 #include "lv_drivers/sdl/sdl.h"
+#endif
 
-#include "examplelist.h"
-
-#include "src/ui/ui.h"
-#include "src/ui/screens.h"
+#include "eez-project/src/ui/ui.h"
+#include "eez-project/src/ui/screens.h"
 
 /*********************
  *      DEFINES
@@ -40,13 +40,13 @@
  *  STATIC PROTOTYPES
  **********************/
 static void hal_init(void);
-static int tick_thread(void * data);
-static void memory_monitor(lv_timer_t * param);
 
 /**********************
  *  STATIC VARIABLES
  **********************/
-static lv_disp_t  * disp1;
+#if LVGL_VERSION_MAJOR < 9
+static lv_disp_t *disp1;
+#endif
 
 int monitor_hor_res, monitor_ver_res;
 
@@ -65,10 +65,15 @@ static void lv_example_noop(void) {
 
 int main(int argc, char ** argv)
 {
-    extern const struct lv_ci_example lv_ci_example_list[];
-    const struct lv_ci_example *ex = NULL;
-    monitor_hor_res = atoi(argv[1]);
-    monitor_ver_res = atoi(argv[2]);
+#if LVGL_VERSION_MAJOR >= 9
+    monitor_hor_res = 800;
+    monitor_ver_res = 480;
+#else
+    monitor_hor_res = SDL_HOR_RES;
+    monitor_ver_res = SDL_VER_RES;
+#endif
+
+    // monitor_hor_res = 800; monitor_ver_res = 480;
     printf("Starting with screen resolution of %dx%d px\n", monitor_hor_res, monitor_ver_res);
 
     /*Initialize LittlevGL*/
@@ -78,14 +83,7 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-    if(ex != NULL && ex->fn != NULL) {
-        ex->fn();
-    } else {
-        // extern void CHOSEN_DEMO(void);
-        // CHOSEN_DEMO();
-
-        ui_init();
-    }
+    ui_init();
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
@@ -100,28 +98,12 @@ void do_loop(void *arg)
 
     ui_tick();
 
-    SDL_Event event;
-    
-    while(SDL_PollEvent(&event)) {
-        #if USE_MOUSE != 0
-            mouse_handler(&event);
-        #endif
-
-        #if USE_KEYBOARD
-            keyboard_handler(&event);
-        #endif
-
-#if USE_MOUSEWHEEL != 0
-            mousewheel_handler(&event);
-#endif
-    }
-
     static uint32_t time1;
     uint32_t time2 = lv_tick_get();
     if (time2 - time1 >= 1000) {
         time1 = time2;
         ledstate = !ledstate;
-    }
+   }
 }
 
 /**********************
@@ -134,6 +116,25 @@ void do_loop(void *arg)
  */
 static void hal_init(void)
 {
+#if LVGL_VERSION_MAJOR >= 9
+    lv_display_t * disp = lv_sdl_window_create(monitor_hor_res, monitor_ver_res);
+
+    lv_group_t * g = lv_group_create();
+    lv_group_set_default(g);
+
+    lv_sdl_mouse_create();
+    lv_sdl_mousewheel_create();
+    lv_sdl_keyboard_create();
+ 
+    lv_indev_t * mouse = lv_sdl_mouse_create();
+    lv_indev_set_group(mouse, lv_group_get_default());
+    
+    lv_indev_t * mousewheel = lv_sdl_mousewheel_create();
+    lv_indev_set_group(mousewheel, lv_group_get_default());
+
+    lv_indev_t * keyboard = lv_sdl_keyboard_create();
+    lv_indev_set_group(keyboard, lv_group_get_default());    
+#else
    /* Use the 'monitor' driver which creates window on PC's monitor to simulate a display*/
     sdl_init();
 
@@ -151,9 +152,6 @@ static void hal_init(void)
     disp_drv.ver_res = monitor_ver_res;
     disp1 = lv_disp_drv_register(&disp_drv);
 
-    //lv_group_t * g = lv_group_create();
-    //lv_group_set_default(g);
-
     /* Add the mouse as input device
     * Use the 'mouse' driver which reads the PC's mouse*/
     static lv_indev_drv_t indev_drv_1;
@@ -169,25 +167,11 @@ static void hal_init(void)
     indev_drv_2.type = LV_INDEV_TYPE_KEYPAD;
     indev_drv_2.read_cb = sdl_keyboard_read;
     lv_indev_t *kb_indev = lv_indev_drv_register(&indev_drv_2);
-    //lv_indev_set_group(kb_indev, g);
     static lv_indev_drv_t indev_drv_3;
     lv_indev_drv_init(&indev_drv_3); /*Basic initialization*/
     indev_drv_3.type = LV_INDEV_TYPE_ENCODER;
     indev_drv_3.read_cb = sdl_mousewheel_read;
 
     lv_indev_t * enc_indev = lv_indev_drv_register(&indev_drv_3);
-    //lv_indev_set_group(enc_indev, g);
-
-    /* Optional:
-     * Create a memory monitor task which prints the memory usage in periodically.*/
-    lv_timer_create(memory_monitor, 3000, NULL);
-}
-
-/**
- * Print the memory usage periodically
- * @param param
- */
-static void memory_monitor(lv_timer_t * param)
-{
-    (void) param; /*Unused*/
+#endif
 }
