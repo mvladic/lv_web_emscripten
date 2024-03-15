@@ -612,8 +612,8 @@ typedef void * lv_user_data_t;
 #define USE_SDL 1
 //#define USE_SDL_GPU 1
 #if USE_SDL || USE_SDL_GPU
-#  define SDL_HOR_RES     1200
-#  define SDL_VER_RES     900
+#  define SDL_HOR_RES     800
+#  define SDL_VER_RES     480
 
 /* Scale window by this factor (useful when simulating small screens) */
 #  define SDL_ZOOM        1
