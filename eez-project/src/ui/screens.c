@@ -2,6 +2,7 @@
 #include "images.h"
 #include "fonts.h"
 #include "actions.h"
+#include "vars.h"
 #include "styles.h"
 #include "ui.h"
 
@@ -12,7 +13,7 @@ static void event_handler_cb_screen_1_print_label_header(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 2, 0);
+        flowPropagateValue(flowState, 9, 0);
     }
 }
 
@@ -20,7 +21,7 @@ static void event_handler_cb_screen_1_print_btn_menu_move_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 7, 0);
+        flowPropagateValue(flowState, 14, 0);
     }
 }
 
@@ -28,7 +29,7 @@ static void event_handler_cb_screen_1_print_btn_menu_setting_s1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 8, 0);
+        flowPropagateValue(flowState, 15, 0);
     }
 }
 
@@ -37,9 +38,11 @@ static void event_handler_cb_screen_1_print_slider_print_view(lv_event_t *e) {
     void *flowState = e->user_data;
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        int32_t value = lv_slider_get_value(ta);
         if (tick_value_change_obj != ta) {
-            assignIntegerProperty(flowState, 10, 2, value, "Failed to assign Value in Slider widget");
+            int32_t value = lv_slider_get_value(ta);
+            if (tick_value_change_obj != ta) {
+                assignIntegerProperty(flowState, 17, 3, value, "Failed to assign Value in Slider widget");
+            }
         }
     }
 }
@@ -48,7 +51,7 @@ static void event_handler_cb_screen_2_move_btn_menu_print_s2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 0, 0);
+        flowPropagateValue(flowState, 4, 0);
     }
 }
 
@@ -56,7 +59,7 @@ static void event_handler_cb_screen_2_move_btn_menu_setting_s2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 3, 0);
+        flowPropagateValue(flowState, 6, 0);
     }
 }
 
@@ -64,7 +67,7 @@ static void event_handler_cb_screen_3_setting_btn_menu_print_s3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 0, 0);
+        flowPropagateValue(flowState, 4, 0);
     }
 }
 
@@ -72,7 +75,7 @@ static void event_handler_cb_screen_3_setting_btn_menu_move_s3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CLICKED) {
-        flowPropagateValue(flowState, 2, 0);
+        flowPropagateValue(flowState, 5, 0);
     }
 }
 
@@ -678,7 +681,7 @@ void create_screen_screen_1_print() {
 void tick_screen_screen_1_print() {
     void *flowState = getFlowState(0, 0);
     {
-        int32_t new_val = evalIntegerProperty(flowState, 10, 2, "Failed to evaluate Value in Slider widget");
+        int32_t new_val = evalIntegerProperty(flowState, 17, 3, "Failed to evaluate Value in Slider widget");
         int32_t cur_val = lv_slider_get_value(objects.slider_print_view);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.slider_print_view;
@@ -687,7 +690,7 @@ void tick_screen_screen_1_print() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 11, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 18, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.number_print);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.number_print;
@@ -844,13 +847,4 @@ tick_screen_func_t tick_screen_funcs[] = {
 
 void tick_screen(int screen_index) {
     tick_screen_funcs[screen_index]();
-}
-
-
-size_t get_num_screens() {
-    return sizeof(tick_screen_funcs) / sizeof(tick_screen_func_t);
-}
-
-lv_obj_t *get_screen_obj(size_t screen_index) {
-    return ((lv_obj_t **)(&objects))[screen_index];
 }
